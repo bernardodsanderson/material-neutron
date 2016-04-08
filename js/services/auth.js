@@ -31,10 +31,6 @@ ndrive.service("AuthService", function ($http, $rootScope) {
             }
           }
         }
-        
-        else {
-          $rootScope.error_message('Error logging in.');
-        }
       });
     }
   };

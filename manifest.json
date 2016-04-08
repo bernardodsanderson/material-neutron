@@ -1,8 +1,8 @@
 {
-  "name": "Super Neutron Drive",
+  "name": "Material Neutron Drive",
   "short_name": "Neutron",
-  "description": "The honey badger of code editors",
-  "version": "15.4.1",
+  "description": "The material honey badger of code editors",
+  "version": "16",
   
   "app": {
     "background": {
