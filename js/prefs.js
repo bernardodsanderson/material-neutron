@@ -12,7 +12,7 @@ var DEFAULT_PREFS = {
   pmargin: true,
   softab: true,
   behave: true,
-  show_login: true,
+  show_login: false,
   spellcheck: false,
   autocomplete: true
 };
