@@ -50,7 +50,7 @@ ndrive.run(function ($rootScope, $modal, $q) {
   
   $rootScope.load_editor = function () {
     Editor = ace.edit("editor");
-    Editor.setTheme("ace/theme/textmate");
+    Editor.setTheme("ace/theme/tomorrow_night_eighties");
     
     $rootScope.load_commands(0);
   };

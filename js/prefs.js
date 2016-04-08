@@ -1,9 +1,9 @@
 var DEFAULT_PREFS = {
-  theme: 'textmate',
-  fontsize: '16px',
+  theme: 'tomorrow_night_eighties',
+  fontsize: '12px',
   keybind: 'ace',
-  soft_wrap: 'off',
-  print_margin: 80,
+  soft_wrap: 'on',
+  print_margin: 0,
   tabsize: 2,
   hactive: true,
   hword: true,
