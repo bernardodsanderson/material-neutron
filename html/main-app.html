@@ -14,7 +14,7 @@
       <div ng-class="{selected: $index == current_tab, unsaved: tab.md5sum != tab.saved_md5sum}" class="tab clickme" ng-repeat="tab in tabs" data-pid="{{ tab.id }}" data-type="{{ tab.pid() }}" style="left: {{ tab.position($index) }}px">
         <div>
           <div title="{{ tab.path }}" tab-drag ng-mousedown="switch_tab($index, true)" class="name">{{ tab.name }}</div>
-          <div ng-mousedown="remove_tab($index)">&times;</div>
+          <div ng-mousedown="remove_tab($index)"><i class="material-icons" style="font-size: 12px; width: 7px;">close</i></div>
         </div>
       </div>
     </div>
