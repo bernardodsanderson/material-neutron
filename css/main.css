@@ -6103,7 +6103,7 @@ body.tomorrow_night_bright-theme #webViews .cancel .btn {
 
 body.tomorrow_night_eighties-theme {
   color: #ccc;
-  background-color: #272727
+  background-color: #263238
 }
 
 body.tomorrow_night_eighties-theme a {
@@ -6144,7 +6144,7 @@ body.tomorrow_night_eighties-theme #menuBar #messages>div:after {
 body.tomorrow_night_eighties-theme #leftSplitter {
   border-right: 1px solid #414141;
   border-left: 1px solid #414141;
-  background-color: #272727
+  background-color: #263238
 }
 
 body.tomorrow_night_eighties-theme #leftSplitter>div .mover {
@@ -6164,11 +6164,11 @@ body.tomorrow_night_eighties-theme #leftSide .tools ul li {
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li.active {
-  background-color: #393939
+  background-color: #222D32
 }
 
 body.tomorrow_night_eighties-theme #leftSide .side-tool {
-  background-color: #2d2d2d
+  background-color: #222D32
 }
 
 body.tomorrow_night_eighties-theme #leftSide #projects ul.project {
@@ -6189,7 +6189,7 @@ body.tomorrow_night_eighties-theme #leftSide #projects a:hover {
 }
 
 body.tomorrow_night_eighties-theme #mainApp {
-  background-color: #272727
+  background-color: #263238
 }
 
 body.tomorrow_night_eighties-theme #tabs {
@@ -6200,7 +6200,7 @@ body.tomorrow_night_eighties-theme #tabs .tab {
   border-top: 1px solid #414141;
   border-left: 1px solid #414141;
   border-right: 1px solid #414141;
-  background-color: #272727
+  background-color: #263238
 }
 
 body.tomorrow_night_eighties-theme #tabs .tab.selected {
@@ -6225,7 +6225,7 @@ body.tomorrow_night_eighties-theme .open .dropdown-toggle.btn {
 }
 
 body.tomorrow_night_eighties-theme .dropdown-menu {
-  background-color: #2d2d2d;
+  background-color: #222D32;
   color: #ccc
 }
 
@@ -6238,13 +6238,13 @@ body.tomorrow_night_eighties-theme .dropdown-menu>li>a:hover {
 }
 
 body.tomorrow_night_eighties-theme .modal-content {
-  background-color: #2d2d2d;
+  background-color: #222D32;
   color: #ccc
 }
 
 body.tomorrow_night_eighties-theme #rightClickMenu {
   color: #ccc;
-  background-color: #272727;
+  background-color: #263238;
   border: 1px solid #414141
 }
 
@@ -6285,7 +6285,7 @@ body.tomorrow_night_eighties-theme .nav-tabs>li.active>a,
 body.tomorrow_night_eighties-theme .nav-tabs>li.active>a:hover,
 body.tomorrow_night_eighties-theme .nav-tabs>li.active>a:focus {
   color: #ccc;
-  background-color: #2d2d2d;
+  background-color: #222D32;
   border: 1px solid #414141;
   border-bottom-color: transparent
 }
@@ -6310,7 +6310,7 @@ body.tomorrow_night_eighties-theme .form-control {
 
 body.tomorrow_night_eighties-theme input[type=checkbox],
 body.tomorrow_night_eighties-theme input[type=radio] {
-  background-color: #272727;
+  background-color: #263238;
   color: #ccc;
   border: 1px solid #414141
 }
@@ -6333,7 +6333,7 @@ body.tomorrow_night_eighties-theme .modal-content {
 }
 
 body.tomorrow_night_eighties-theme .ace_search {
-  background-color: #272727;
+  background-color: #263238;
   border: 1px solid #414141;
   color: #ccc
 }
@@ -6348,7 +6348,7 @@ body.tomorrow_night_eighties-theme .ace_button:hover {
 }
 
 body.tomorrow_night_eighties-theme .ace_search_field {
-  background-color: #2d2d2d;
+  background-color: #222D32;
   color: #ccc;
   border-right: 1px solid #414141
 }
@@ -6360,7 +6360,7 @@ body.tomorrow_night_eighties-theme .ace_replace_form {
 
 body.tomorrow_night_eighties-theme .ace_searchbtn,
 body.tomorrow_night_eighties-theme .ace_replacebtn {
-  background-color: #2d2d2d;
+  background-color: #222D32;
   border-left: 1px solid #414141
 }
 
@@ -6386,7 +6386,7 @@ body.tomorrow_night_eighties-theme .beamsModal hr {
 }
 
 body.tomorrow_night_eighties-theme #webViews .cancel {
-  background-color: #2d2d2d
+  background-color: #222D32
 }
 
 body.tomorrow_night_eighties-theme #webViews .cancel .btn {
