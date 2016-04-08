@@ -6134,7 +6134,7 @@ body.tomorrow_night_eighties-theme .btn:hover {
 }
 
 body.tomorrow_night_eighties-theme #menuBar {
-  border-bottom: 1px solid #414141
+  /*border-bottom: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme #menuBar #messages>div:after {
@@ -6142,8 +6142,8 @@ body.tomorrow_night_eighties-theme #menuBar #messages>div:after {
 }
 
 body.tomorrow_night_eighties-theme #leftSplitter {
-  border-right: 1px solid #414141;
-  border-left: 1px solid #414141;
+  /*border-right: 1px solid #414141;
+  border-left: 1px solid #414141;*/
   background-color: #263238
 }
 
@@ -6156,11 +6156,11 @@ body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu .dropdown-su
 }
 
 body.tomorrow_night_eighties-theme #leftSide .menu {
-  border-bottom: 1px solid #414141
+  /*border-bottom: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li {
-  border-right: 1px solid #414141
+  /*border-right: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li.active {
@@ -6193,19 +6193,19 @@ body.tomorrow_night_eighties-theme #mainApp {
 }
 
 body.tomorrow_night_eighties-theme #tabs {
-  border-bottom: 1px solid #414141
+  /*border-bottom: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme #tabs .tab {
-  border-top: 1px solid #414141;
+  /*border-top: 1px solid #414141;
   border-left: 1px solid #414141;
-  border-right: 1px solid #414141;
+  border-right: 1px solid #414141;*/
   background-color: #263238
 }
 
 body.tomorrow_night_eighties-theme #tabs .tab.selected {
-  background-color: #393939;
-  border-bottom: 2px solid #9c9
+  background-color: #222D32;
+  border-bottom: 1px solid #9c9;
 }
 
 body.tomorrow_night_eighties-theme #tabs .tab>div>div:first-child:hover {
@@ -6217,7 +6217,7 @@ body.tomorrow_night_eighties-theme #tabs .tab>div>div:last-child:hover {
 }
 
 body.tomorrow_night_eighties-theme #tabs #tab-list {
-  border-left: 1px solid #414141
+  /*border-left: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme .open .dropdown-toggle.btn {
@@ -7394,7 +7394,7 @@ body.xcode-theme #webViews .cancel .btn {
   left: 300px;
   top: 0;
   height: 100%;
-  width: 9px;
+  width: 4px;
   z-index: 10
 }
 
@@ -7416,7 +7416,7 @@ body.xcode-theme #webViews .cancel .btn {
 }
 
 #leftSplitter>div .mover {
-  width: 5px;
+  width: 3px;
   height: 22px;
   position: absolute;
   top: calc(50% + 5px);
@@ -7442,7 +7442,8 @@ body.xcode-theme #webViews .cancel .btn {
 
 #leftSide .menu {
   padding: 0 5px 0 0;
-  height: 29px
+  height: 29px;
+  margin-bottom: -1px;
 }
 
 #leftSide .menu .btn {
@@ -7545,7 +7546,7 @@ body.xcode-theme #webViews .cancel .btn {
 
 #mainApp {
   position: absolute;
-  left: 309px;
+  left: 304px;
   top: 0;
   height: 100%;
   width: calc(100% - 309px);
@@ -7602,8 +7603,6 @@ body.xcode-theme #webViews .cancel .btn {
   height: 26px;
   width: 130px;
   overflow: hidden;
-  border-top-right-radius: 30px 60px;
-  border-top-left-radius: 30px 60px;
   padding: 2px 8px 1px 8px
 }
 
