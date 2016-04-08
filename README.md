@@ -1,5 +1,4 @@
-Material Neutron-Drive
-===================
+# Material Neutron
 
 A Material Design version of the Neutron-Drive Chrome App text editor.
 
