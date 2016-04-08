@@ -1,0 +1,211 @@
+
+@neutronFont: 'VT323', serif;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#mainWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.nfont {
+  font-family: @neutronFont;
+}
+
+label.dir {
+  padding-top: 5px;
+}
+
+.clickme {
+  cursor: pointer;
+}
+
+.error-message {
+  float: left;
+}
+
+.preselect {
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    content: "\25BE";
+    top: 19%;
+    right: 12px;
+  }
+}
+select.form-control {
+  -webkit-appearance: none;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+}
+
+.checkbox, .radio {
+  position: relative;
+  
+  label.real {
+    display: inline-block;
+    padding-top: 2px;
+  }
+}
+
+input[type=checkbox] + label {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  top: 0px;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+input[type=radio] + label {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2.5px;
+  top: -2.5px;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+input[type=checkbox]:checked + label {
+  &:after {
+    content: "\2713";
+  }
+}
+
+input[type=radio]:checked + label {
+  &:after {
+    content: "\25CF";
+  }
+}
+
+.ace_searchbtn.next {
+  background-image: none !important;
+  
+  &:after {
+    font-family: FontAwesome;
+    content: "\f078";
+    font-size: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+  }
+}
+
+.ace_searchbtn.prev {
+  background-image: none !important;
+  
+  &:after {
+    font-family: FontAwesome;
+    content: "\f077";
+    font-size: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+  }
+}
+
+.ace_searchbtn_close {
+  background-image: none !important;
+  position: relative;
+  
+  &:after {
+    font-family: FontAwesome;
+    content: "\f05c";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -6px;
+  }
+}
+
+#menuBar #buttons .dropdown-menu {
+  .dropdown-submenu {
+    position:relative;
+  }
+  
+  .dropdown-submenu>.dropdown-menu {
+    top:0;
+    right:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    border-radius:0 6px 6px 6px;
+  }
+  
+  .dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+  }
+  
+  .dropdown-submenu>a:after {
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 5px 5px 0;
+    margin-top:5px;
+    margin-right:-10px;
+  }
+  
+  .dropdown-submenu.pull-left {
+    float:none;
+  }
+  
+  .dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    border-radius:6px 0 6px 6px;
+  }
+}
+
+.button-assist {
+  input {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: ~'calc(100% - 7em)';
+  }
+  
+  button {
+    vertical-align: top;
+  }
+}
+
+.tac {
+  text-align: center;
+}
+
+.ace_marker-layer .misspelled {
+  position: absolute;
+  z-index: -2;
+  border-bottom: 1px dotted red;
+  margin-bottom: -1px;
+}
+
+.misspelled {
+  border-bottom: 1px solid red;
+  margin-bottom: -1px;
+}

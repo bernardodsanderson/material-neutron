@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="ndrive">
+  <head>
+    <title>Super Neutron Drive</title>
+    <meta charset="utf-8">
+    <link href='/css/fonts.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="textmate-theme">
+    <div id="mainWrapper">
+      <div id="rightClickMenu" ng-controller="RightClickCtrl" style="display: {{ display }}; {{ position }};">
+        <ul>
+          <li ng-repeat="m in menu track by $index">
+            <hr ng-if="m == '-'">
+            <span ng-if="m !== '-'">
+              <a ng-if="is_function(m)" ng-click="m[2](modal)" class="clickme">
+                <i class="fa fa-{{ m[1] }}"></i> {{ m[0] }}
+              </a>
+              <a ng-if="!is_function(m) && m[3]" target="_blank" href="{{ m[3] }}" ng-click="hide_right()">
+                <i class="fa fa-{{ m[1] }}"></i> {{ m[0] }}
+              </a>
+              <a ng-if="!is_function(m) && !m[3]" ng-click="hide_right()">
+                <i class="fa fa-{{ m[1] }}"></i> {{ m[0] }}
+              </a>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div id="menuBar" ng-controller="MenuCtrl" ng-include="'menu.html'" ng-click="hide_right();"></div>
+      <div id="appWrapper">
+        <div id="leftSide" ng-include="'side-tools.html'"></div>
+        <div id="leftSplitter">
+          <div ng-controller="SplitterCtrl">
+            <i class="fa {{ cls }}" ng-click="collapse()"></i>
+            <div class="mover"></div>
+          </div>
+        </div>
+        <div id="mainApp" ng-include="'main-app.html'" onload="load_editor()"></div>
+        <div id="rightSide"></div>
+      </div>
+    </div>
+    <div id="webViews" ng-controller="WebViewCtrl" ng-include="'webviews.html'"></div>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/jquery/jquery.event.drag-2.2.js"></script>
+    <script src="/lib/jquery/jquery.event.drag.live-2.2.js"></script>
+    <script src="/lib/jquery/jquery.event.drop-2.2.js"></script>
+    <script src="/lib/jquery/jquery.event.drop.live-2.2.js"></script>
+    
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/ng/angular.min.js"></script>
+    <script src="/lib/ng/angular-debounce.js"></script>
+    <script src="/lib/ng/ui-utils.min.js"></script>
+    <script src="/lib/ng/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    
+    <script src="/lib/ace.1.1.9/src-min/ace.js"></script>
+    <script src="/lib/ace.1.1.9/src-min/keybinding-emacs.js"></script>
+    <script src="/lib/ace.1.1.9/src-min/keybinding-vim.js"></script>
+    <script src="/lib/ace.1.1.9/src-min/ext-language_tools.js"></script>
+    
+    <script src="/lib/typo.js"></script>
+    <script src="/js/spellcheck.js"></script>
+    
+    <script src="/js/custom-modes/minecraft.js"></script>
+    
+    <script src="/lib/fernetBrowser.js"></script>
+    <script src="/lib/jwt-token.js"></script>
+    <script src="/lib/sjcl.js"></script>
+    
+    <script src="/js/utils.js"></script>
+    <script src="/js/os.js"></script>
+    
+    <script src="/js/backends/local.js"></script>
+    <script src="/js/backends/free-agent.js"></script>
+    <script src="/js/backends/gdrive.js"></script>
+    <script src="/js/backends/beam.js"></script>
+    
+    <script src="/js/md5.js"></script>
+    <script src="/js/b64.js"></script>
+    <script src="/js/modes.js"></script>
+    <script src="/js/prefs.js"></script>
+    <script src="/js/keyboard.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/ctrl/right-click.js"></script>
+    <script src="/js/ctrl/main.js"></script>
+    <script src="/js/ctrl/menu.js"></script>
+    <script src="/js/ctrl/side.js"></script>
+    <script src="/js/ctrl/search.js"></script>
+    <script src="/js/ctrl/webviews.js"></script>
+    
+    <script src="/js/ctrl/modals/gdrive-modals.js"></script>
+    <script src="/js/ctrl/modals/upload.js"></script>
+    
+    <script src="/js/services/auth.js"></script>
+    <script src="/js/services/beam-factory.js"></script>
+    <script src="/js/services/beam-setup.js"></script>
+    <script src="/js/services/error.js"></script>
+    <script src="/js/services/neutron.js"></script>
+    
+    <script src="/js/directives.js"></script>
+  </body>
+</html>

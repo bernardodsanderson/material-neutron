@@ -1,0 +1,147 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+  <h4 class="modal-title">Preferences</h4>
+</div>
+<form role="form" ng-submit="save_prefs()">
+  <div class="modal-body">
+    <table>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="prefs-theme">Theme:</label>
+            <div class="preselect">
+              <select id="prefs-theme" class="form-control" ng-model="form.theme" ng-options="theme.key as theme.name for theme in themes"></select>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label for="prefs-keybind">Key Bindings:</label>
+            <div class="preselect">
+              <select id="prefs-keybind" class="form-control" ng-model="form.keybind" ng-options="key.key as key.name for key in key_modes"></select>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="prefs-soft_wrap">Soft Wrap:</label>
+            <div class="preselect">
+              <select id="prefs-soft_wrap" class="form-control" ng-model="form.soft_wrap" ng-options="theme.key as theme.name for theme in wrap_modes"></select>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <label for="prefs-fontsize">Font Size:</label>
+            <div class="preselect">
+              <select id="prefs-fontsize" class="form-control" ng-model="form.fontsize" ng-options="key.key as key.name for key in font_modes"></select>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group pull-left" style="margin-right: 40px">
+            <label for="prefs-print_margin">Margin:</label>
+            <input id="prefs-print_margin" class="form-control" ng-model="form.print_margin" type="number" step="1" style="width: 70px;">
+          </div>
+          <div class="form-group pull-left">
+            <label for="prefs-tabsize">Tab Size:</label>
+            <input id="prefs-tabsize" class="form-control" ng-model="form.tabsize" type="number" step="1" style="width: 60px;">
+          </div>
+          <div class="clearfix"></div>
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr class="checks">
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.hactive" id="pref-hactive">
+            <label for="pref-hactive"></label>
+            <label class="real" for="pref-hactive">Highlight Active Line</label>
+          </div>
+        </td>
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.hword" id="pref-hword">
+            <label for="pref-hword"></label>
+            <label class="real" for="pref-hword">Highlight Selected Word</label>
+          </div>
+        </td>
+      </tr>
+      <tr class="checks">
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.invisibles" id="pref-invisibles">
+            <label for="pref-invisibles"></label>
+            <label class="real" for="pref-invisibles">Show Invisibles</label>
+          </div>
+        </td>
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.gutter" id="pref-gutter">
+            <label for="pref-gutter"></label>
+            <label class="real" for="pref-gutter">Show Gutter</label>
+          </div>
+        </td>
+      </tr>
+      <tr class="checks">
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.pmargin" id="pref-pmargin">
+            <label for="pref-pmargin"></label>
+            <label class="real" for="pref-pmargin">Show Margin</label>
+          </div>
+        </td>
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.softab" id="pref-softab">
+            <label for="pref-softab"></label>
+            <label class="real" for="pref-softab">Use Soft Tab</label>
+          </div>
+        </td>
+      </tr>
+      <tr class="checks">
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.behave" id="pref-behave">
+            <label for="pref-behave"></label>
+            <label class="real" for="pref-behave">Code Behaviors</label>
+          </div>
+        </td>
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.autocomplete" id="pref-autocomplete">
+            <label for="pref-autocomplete"></label>
+            <label class="real" for="pref-autocomplete">Auto Complete</label>
+          </div>
+        </td>
+      </tr>
+      <tr class="checks">
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.spellcheck" id="pref-spellcheck">
+            <label for="pref-spellcheck"></label>
+            <label class="real" for="pref-spellcheck">Spell Check</label>
+          </div>
+        </td>
+        <td>
+          <div class="checkbox">
+            <input type="checkbox" ng-model="form.show_login" id="pref-show_login">
+            <label for="pref-show_login"></label>
+            <label class="real" for="pref-show_login">Show Login on Launch</label>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button class="btn pull-left" type="button" ng-click="default()">Load Defaults</button>
+    <button class="btn" type="submit">Save</button>
+    <button class="btn btn-cancel" type="button" ng-click="cancel()">Cancel</button>
+  </div>
+</form>
