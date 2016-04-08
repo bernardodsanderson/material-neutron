@@ -1,6 +1,6 @@
 <div class="pull-left">
   <img src="/img/logo-64.png" alt="">
-  <span class="nfont">Super Neutron Drive</span>
+  <span class="nfont">Material Neutron</span>
   <span class="version">V{{ manifest.version }}</span>
 </div>
 <div class="pull-left" id="messages">
@@ -8,8 +8,11 @@
   <div class="info update clickme" ng-if="update" ng-click="do_update('yes')">Click to Update to V{{ update.version }}</div>
 </div>
 <div class="pull-right" id="buttons">
-  <div id="quick-search">
-    <input type="text" placeholder="Quick Search" class="form-control" ng-model="form.qsearch" ui-keydown="{13: 'quick_search($event)', 9: 'focus_editor($event)'}">
+  <div id="quick-search" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+    <label class="mdl-button mdl-js-button mdl-button--icon" for="quick-search-input"><i class="material-icons">search</i></label>
+    <div class="mdl-textfield__expandable-holder">
+      <input id="quick-search-input" type="text" class="form-control mdl-textfield__input" ng-model="form.qsearch" ui-keydown="{13: 'quick_search($event)', 9: 'focus_editor($event)'}">
+    </div>
   </div>
   <div class="btn-group">
     <div class="btn-group">

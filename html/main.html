@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html ng-app="ndrive">
   <head>
-    <title>Material Neutron Drive</title>
+    <title>Material Neutron</title>
     <meta charset="utf-8">
     <link href='/css/fonts.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/lib/material/material.min.css">
+    <style>
+      @font-face {
+        font-family: 'Roboto';
+        src: url(/lib/fonts/Roboto-Regular.ttf);
+      }
+      
+      @font-face {
+        font-family: 'Material Icons';
+        src: url(/lib/fonts/MaterialIcons-Regular.ttf);
+      }
+    </style>
   </head>
   <body class="tomorrow_night_eighties-theme">
     <div id="mainWrapper">
@@ -53,6 +65,8 @@
     <script src="/lib/ng/angular-debounce.js"></script>
     <script src="/lib/ng/ui-utils.min.js"></script>
     <script src="/lib/ng/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    
+    <script src="/lib/material/material.min.js"></script>
     
     <script src="/lib/ace.1.1.9/src-min/ace.js"></script>
     <script src="/lib/ace.1.1.9/src-min/keybinding-emacs.js"></script>
