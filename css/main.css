@@ -9,7 +9,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Roboto', sans-serif
 }
 
 #mainWrapper {
@@ -6232,12 +6232,13 @@ body.tomorrow_night_eighties-theme #tabs #tab-list {
 }
 
 body.tomorrow_night_eighties-theme .open .dropdown-toggle.btn {
-  background-color: #393939
+  background-color: #222D32
 }
 
 body.tomorrow_night_eighties-theme .dropdown-menu {
   background-color: #222D32;
-  color: #ccc
+  color: #ccc;
+  border-radius: 0 !important;
 }
 
 body.tomorrow_night_eighties-theme .dropdown-menu>li>a {
@@ -7287,7 +7288,7 @@ body.xcode-theme #webViews .cancel .btn {
 }
 
 #menuBar {
-  height: 42px
+  height: 45px
 }
 
 #menuBar .btn {
@@ -7300,7 +7301,8 @@ body.xcode-theme #webViews .cancel .btn {
 
 #menuBar #buttons .dropdown-menu {
   left: auto;
-  right: 0
+  right: -4px;
+  top: 37px;
 }
 
 #menuBar #quick-search {

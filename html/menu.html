@@ -20,11 +20,9 @@
         <i class="material-icons" style="font-size: 20px;">menu</i>
       </button>
       <ul class="dropdown-menu">
-        <li><a class="clickme" ng-click="send_event('keyboard-save')"><i class="fa fa-download"></i> Save</a></li>
-        <li><a class="clickme" ng-click="send_event('keyboard-save-all')"><i class="fa fa-paw"></i> Save All</a></li>
+        <li><a class="clickme" ng-click="send_event('keyboard-save')"> Save <i class="material-icons" style="font-size: 14px; float: right; margin-right: -10px;">save</i></a></li>
         <li class="divider"></li>
-        <li><a class="clickme" ng-click="send_event('keyboard-close-tab')"><i class="fa fa-times"></i> Close</a></li>
-        <li><a class="clickme" ng-click="send_event('keyboard-close-tabs-all')"><i class="fa fa-bomb"></i> Close All</a></li>
+        <li><a class="clickme" ng-click="send_event('keyboard-close-tab')"> Close <i class="material-icons" style="font-size: 14px; float: right; margin-right: -10px;">close</i></a></li>
         <li class="divider"></li>
         <li class="dropdown-submenu">
           <a>Recent Files</a>
@@ -32,24 +30,10 @@
             <li ng-repeat="file in recent_files track by $index"><a class="clickme" ng-click="open_recent($index)">{{ file.name }}</a></li>
           </ul>
         </li>
-        <li class="divider"></li>
-        <li>
-          <a class="clickme" ng-click="nbeams_modal()"><i class="fa fa-cloud"></i> Neutron Beams</a>
-        </li>
-        <li class="divider"></li>
-        <li>
-          <a class="clickme" ng-click="check_update()"><i class="fa fa-arrow-circle-up"></i> Check for Update</a>
-        </li>
-        <li ng-if="!neutron_account.token">
-          <a class="clickme" ng-click="login()"><i class="fa fa-caret-square-o-right"></i> Login</a>
-        </li>
-        <li ng-if="neutron_account.token">
-          <a class="clickme" ng-click="logout()"><i class="fa fa-caret-square-o-left"></i> Logout</a>
-        </li>
       </ul>
     </div>
     <button type="button" class="btn" ng-click="pref_modal()"><i class="material-icons" style="font-size: 18px;">settings</i></button>
-    <button type="button" class="btn" ng-click="help_modal()"><i class="material-icons" style="font-size: 18px;">help_outline</i></button>
+    <button type="button" class="btn" ng-click="help_modal()"><i class="material-icons" style="font-size: 20px; margin-left: -5px;">help_outline</i></button>
   </div>
 </div>
 <div class="clearfix"></div>
