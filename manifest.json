@@ -1,7 +1,7 @@
 {
   "name": "Material Neutron",
-  "short_name": "Neutron",
-  "description": "The material honey badger of code editors",
+  "short_name": "Material Neutron",
+  "description": "A material designed code editor",
   "version": "1.0.0",
   
   "app": {

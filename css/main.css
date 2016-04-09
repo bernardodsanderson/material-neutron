@@ -294,11 +294,12 @@ body.tomorrow_night_eighties-theme #leftSide .menu {
 body.tomorrow_night_eighties-theme #leftSide .tools ul li {
   /*border-right: 1px solid #414141*/
   opacity: 0.6;
+  font-size: 12px;
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li.active {
-  background-color: #222D32;
   opacity: 1;
+  border-bottom: 2px solid #309196;
 }
 
 body.tomorrow_night_eighties-theme #leftSide .side-tool {
@@ -366,11 +367,17 @@ body.tomorrow_night_eighties-theme .dropdown-menu {
 }
 
 body.tomorrow_night_eighties-theme .dropdown-menu>li>a {
-  color: #ccc
+  color: #ccc;
+  background-color: #263238;
+  margin-top: -9px;
+  padding-top: 12px;
+  margin-bottom: -9px;
+  padding-bottom: 9px;
 }
 
 body.tomorrow_night_eighties-theme .dropdown-menu>li>a:hover {
-  background-color: #222D32;
+  border-left: 2px solid teal;
+  padding-left: 18px;
 }
 
 body.tomorrow_night_eighties-theme .modal-content {
@@ -466,7 +473,7 @@ body.tomorrow_night_eighties-theme .modal-footer {
 }
 
 body.tomorrow_night_eighties-theme .modal-content {
-  border: 1px solid #414141
+  /*border: 1px solid #414141*/
 }
 
 body.tomorrow_night_eighties-theme .ace_search {
@@ -1165,4 +1172,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 /* MATERIAL DESIGN CHANGES */
 .mdl-textfield__input {
   border-color: #309196 !important;
+}
+.dropdown-menu .divider {
+  opacity: 0.2;
 }
