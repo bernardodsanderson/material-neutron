@@ -45,7 +45,8 @@
         <div id="leftSide" ng-include="'side-tools.html'"></div>
         <div id="leftSplitter">
           <div ng-controller="SplitterCtrl">
-            <i class="fa {{ cls }}" ng-click="collapse()"></i>
+            <div role="button" class="mdl-layout__drawer-button" ng-click="collapse()" style="position: absolute; top: -43px; left: -22px; z-index: 100;"><i class="material-icons" style="font-size: 20px">more_vert</i></div>
+            <!--<i class="fa {{ cls }}" ng-click="collapse()"></i>-->
             <div class="mover"></div>
           </div>
         </div>
@@ -71,7 +72,7 @@
     <script src="/lib/ace.1.2.3/src-min/ace.js"></script>
     <script src="/lib/ace.1.2.3/src-min/keybinding-emacs.js"></script>
     <script src="/lib/ace.1.2.3/src-min/keybinding-vim.js"></script>
-    <script src="/lib/ace.1.2.3/src-min/ext-language_tools.js"></script>
+    <!--<script src="/lib/ace.1.2.3/src-min/ext-language_tools.js"></script>-->
     
     <script src="/lib/typo.js"></script>
     <script src="/js/spellcheck.js"></script>
