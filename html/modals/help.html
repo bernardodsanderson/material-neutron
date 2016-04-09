@@ -1,13 +1,12 @@
 <div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"><i class="material-icons" style="font-size: 20px; float: right;">close</i></button>
   <h4 class="modal-title">Help</h4>
 </div>
 <div class="modal-body">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#help-about" data-toggle="tab">About</a></li>
-    <li><a href="#help-keyboard" data-toggle="tab">Keyboard Shortcuts</a></li>
-    <li><a href="#help-credits" data-toggle="tab" ng-click="get_credits()">Credits</a></li>
-    <li><a href="#help-os-credits" data-toggle="tab">Open Source Credits</a></li>
+    <li class="active"><a href="#help-about" data-toggle="tab" style="height:41px;">About</a></li>
+    <li><a href="#help-keyboard" data-toggle="tab" style="height:41px;">Keyboard Shortcuts</a></li>
+    <li><a href="#help-os-credits" data-toggle="tab" style="height:41px;">Open Source Credits</a></li>
   </ul>
   
   <!-- Tab panes -->
@@ -17,54 +16,21 @@
       <h3>Material Neutron</h3>
       <div class="version">Version {{ version }}</div>
       <p>
-        For support and help see our <a href="https://super.neutrondrive.com/help/" target="_blank">Frequently Asked Questions</a> or visit our 
-        <a href="https://plus.google.com/u/0/communities/103400845906318724539" target="_blank">community support page</a>. 
-        Also members can find support on our <a href="https://super.neutrondrive.com/members/" target="_blank">member's page</a>.
-      </p>
-      <p>
         <br>
-        Written By: <a href="https://plus.google.com/u/0/+PaulPizzaPantherBailey/posts" target="_blank">Paul Bailey</a>
+        Written By: <a href="http://bernardoanderson.com" target="_blank">Bernardo Anderson</a>
       </p>
       <p>
-        License: <a href="https://github.com/pizzapanther/Super-Neutron-Drive/blob/master/LICENSE" target="_blank">MIT License</a>
+        License: <a href="https://gitlab.com/bernardodsanderson/material-neutron/blob/master/LICENSE" target="_blank">MIT License</a>
       </p>
       <p>
-        Github: <a href="https://github.com/pizzapanther/Super-Neutron-Drive" target="_blank">https://github.com/pizzapanther/Super-Neutron-Drive</a>
-      </p>
-      <p>
-        Additional info on Neutron Drive can be found at <a href="https://super.neutrondrive.com/" target="_blank">super.neutrondrive.com</a>
+        Gitlab: <a href="https://gitlab.com/bernardodsanderson/material-neutron" target="_blank">https://gitlab.com/bernardodsanderson/material-neutron</a>
       </p>
       <div class="clearfix"></div>
     </div>
     <div class="tab-pane" id="help-keyboard" ng-include="'keyboard-shortcuts.html'"></div>
-    <div class="tab-pane" id="help-credits">
-      <h3 class="spin" ng-if="!credits">
-        <br>
-        Getting Credits<br><br>
-        <i class="fa fa-spinner fa-spin fa-3x"></i>
-      </h3>
-      <div ng-if="credits">
-        <h4 class="tac">
-          <strong>Neutron Drive is brought to you by the following Members</strong>
-        </h4>
-        <div class="tac">
-          <a href="https://super.neutrondrive.com/members/" target="_blank">Become a Member &raquo;</a>
-        </div>
-        <div class="level" ng-if="level[1].length" ng-repeat="level in credits">
-          <div>
-            <h2>{{ level[0] }}s</h2>
-            <div class="name" ng-repeat="user in level[1] track by $index">
-              {{ user.name }}
-            </div>
-            <div class="clearfix"></div>
-            <hr>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="tab-pane" id="help-os-credits">
       <p>
-        Thanks to the following open source projects that made Super Neutron Drive possible.
+        Thanks to the following open source projects that made Material Neutron possible.
       </p>
       <ul>
         <li>

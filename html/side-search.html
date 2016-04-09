@@ -41,20 +41,20 @@
   <hr>
   <div class="form-group">
     <div ng-show="form.context == 'current'">
-      <button type="button" ng-click="search_prev()" class="btn btn-default">&laquo; Find Prev</button>
-      <button type="submit" class="btn btn-default">Find Next &raquo;</button>
+      <button type="button" ng-click="search_prev()" class="mdl-button mdl-js-button" style="color: #ccc;"><i class="material-icons">navigate_before</i> Find Prev</button>
+      <button type="submit" class="mdl-button mdl-js-button" style="color: #ccc;">Find Next <i class="material-icons">navigate_next</i></button>
     </div>
     <div ng-show="form.context == 'tabs'">
-      <button type="submit" class="btn btn-default">Find All</button>
+      <button type="submit" class="mdl-button mdl-js-button" style="color: #ccc;">Find All</button>
     </div>
   </div>
   <div class="form-group">
     <div ng-show="form.context == 'current'">
-      <button type="button" ng-click="replace_next()" class="btn btn-default">Replace &amp; Next &raquo;</button>
-      <button type="button" ng-click="replace_all()" class="btn btn-default">Replace All</button>
+      <button type="button" ng-click="replace_next()" class="mdl-button mdl-js-button" style="color: #ccc;">Replace &amp; Next <i class="material-icons">navigate_next</i></button>
+      <button type="button" ng-click="replace_all()" class="mdl-button mdl-js-button" style="color: #ccc;">Replace All</button>
     </div>
     <div ng-show="form.context == 'tabs'">
-      <button type="button" ng-click="replace_all()" class="btn btn-default">Replace All</button>
+      <button type="button" ng-click="replace_all()" class="mdl-button mdl-js-button" style="color: #ccc;">Replace All</button>
     </div>
   </div>
 </form>

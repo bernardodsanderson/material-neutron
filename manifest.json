@@ -2,7 +2,7 @@
   "name": "Material Neutron",
   "short_name": "Neutron",
   "description": "The material honey badger of code editors",
-  "version": "16",
+  "version": "1.0.0",
   
   "app": {
     "background": {
@@ -25,9 +25,6 @@
     "clipboardWrite",
     {"fileSystem": ["write", "retainEntries", "directory"]},
     
-    "http://manx.neutrondrive.com:8080/*",
-    "https://super.neutrondrive.com/*",
-    "https://*.chromiumapp.org/*",
     "https://drive.google.com/*"
   ],
   
