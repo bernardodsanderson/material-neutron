@@ -2,24 +2,14 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
   $scope.view = 'main';
   $scope.project_types = [
     {name: 'Local', cls: 'LocalFS'},
-    {name: 'Google Drive', cls: 'GDriveFS'},
-    {name: 'Neutron Beam', cls: 'NBeamFS'},
+    // {name: 'Google Drive', cls: 'GDriveFS'}
   ];
   $scope.google_accounts = [
     {name: 'Add An Account', value: 'add-google'}
   ];
   
-  $scope.beams = [
-    {name: 'Add A Beam', value: 'add-beam'}
-  ];
-  
   for (var i=0; i < $rootScope.google_accounts.length; i++) {
     $scope.google_accounts.push({name: $rootScope.google_accounts[i].name, value: $rootScope.google_accounts[i].id});
-  }
-  
-  for (i=0; i < $rootScope.neutron_beams.length; i++) {
-    var name = $rootScope.neutron_beams[i].address + ':' + $rootScope.neutron_beams[i].port;
-    $scope.beams.push({name: name, value: $rootScope.neutron_beams[i].id});
   }
   
   $scope.form = {
@@ -30,13 +20,6 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
     beam: '',
     folderId: ''
   };
-  
-  $scope.bform = {
-    address: '',
-    port: 32828,
-    secure: true
-  };
-  $scope.bform_error = '';
   
   $scope.local_dir = null;
   $scope.sideScope = sideScope;
@@ -67,10 +50,6 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
     return $scope.form.type.cls === 'GDriveFS';
   };
   
-  $scope.beamUi = function () {
-    return $scope.form.type.cls === 'NBeamFS';
-  };
-  
   $scope.gdriveUiPicker = function () {
     return $scope.gdriveUi() && $scope.form.google_account !== '';
   };
@@ -89,72 +68,9 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
     }
   };
   
-  $scope.beam_choosen = function () {
-    if ($scope.form.beam && $scope.form.beam.value === 'add-beam') {
-      $scope.form.beam = '';
-      $scope.view = 'add-beam';
-      $scope.api_key = null;
-    }
-    
-    else if ($scope.form.beam) {
-      var b = $rootScope.get_beam($scope.form.beam.value);
-      if (b.secure) {
-        $scope.api_key = 'Retrieving API Key ...';
-        BeamSetupService.generate_api(b.id, false, $scope.set_api_key);
-      }
-    }
-  };
-  
-  $scope.add_beam = function () {
-    if ($scope.bform.address === '') {
-      $scope.bform_error = 'Enter a beam address.'; 
-    }
-    
-    else if (!$scope.bform.port || $scope.bform.port < 1) {
-      $scope.bform_error = 'Enter a beam port.'; 
-    }
-    
-    else {
-      var name = $scope.bform.address + ':' + $scope.bform.port;
-      var id = $scope.bform.address + '-' + $scope.bform.port + '-' + Date.now();
-      
-      $scope.beams.push({name: name, value: id});
-      var b = angular.copy($scope.bform);
-      b.id = id;
-      
-      $rootScope.neutron_beams.push(b);
-      $rootScope.store_beams();
-      $scope.form.beam = $scope.beams[$scope.beams.length - 1];
-      
-      $scope.view = 'main';
-      
-      if (b.secure) {
-        $scope.api_key = 'Retrieving API Key ...';
-        BeamSetupService.generate_api(b.id, false, $scope.set_api_key);
-      }
-    }
-  };
-  
-  $scope.set_api_key = function (data) {
-    $scope.api_key = data.key;
-  };
-  
-  $scope.copy_key = function () {
-    var i = document.querySelector('.api_key input');
-    i.setSelectionRange(0, i.value.length);
-    document.execCommand('copy');
-  };
-  
-  $scope.cancel_beam = function () {
-    $scope.view = 'main';
-  };
   
   $scope.mainView = function () {
     return $scope.view === 'main';
-  };
-  
-  $scope.beamView = function () {
-    return $scope.view === 'add-beam';
   };
   
   $scope.google_added = function (event, id) {
@@ -213,17 +129,6 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
         }
       }
       
-      else if ($scope.beamUi()) {
-        if ($scope.form.beam === '') {
-          $scope.form.error = 'Please choose a Neutron Beam.';
-        }
-        
-        else {
-          var beam = $rootScope.get_beam($scope.form.beam.value);
-          $scope.sideScope.add_project($scope.form.name, 'beam', beam);
-          $modalInstance.close();
-        }
-      }
     }
     
     else {
@@ -305,16 +210,6 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
       $scope.projects.push(p);
       $scope.save_projects();
       NBeamFS.store_projects($scope);
-    }
-  };
-  
-  $scope.remove_beam = function ($event, id) {
-    for (var j=0; j < $scope.projects.length; j++) {
-      var project = $scope.projects[j];
-      
-      if (project.cid == 'NBeamFS' && project.pid == id) {
-        $scope.remove_project(project);
-      }
     }
   };
   

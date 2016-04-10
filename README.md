@@ -20,7 +20,6 @@ Material Neutron allows you to edit code on your local machine.
 To Do's:
 - Better sidebar drawer
 - Clean up unsued code
-- Add crtl + f for local file find
 - Git support (?)
 
 

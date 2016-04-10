@@ -26,11 +26,6 @@ var PrefCtrl = function ($scope, $rootScope, $modalInstance) {
   };
 };
 
-var DonateCtrl = function ($scope, $rootScope, $modalInstance) {
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-};
 
 var HelpCtrl = function ($scope, $rootScope, $modalInstance, NeutronService, version) {
   $scope.version = version;
@@ -40,10 +35,6 @@ var HelpCtrl = function ($scope, $rootScope, $modalInstance, NeutronService, ver
     $modalInstance.dismiss('cancel');
   };
   
-  $scope.donate_modal = function () {
-    $modalInstance.dismiss('donate');
-    $rootScope.$emit('donateModal');
-  };
   
   $scope.get_credits = function () {
     if (!$scope.credits) {
@@ -51,100 +42,6 @@ var HelpCtrl = function ($scope, $rootScope, $modalInstance, NeutronService, ver
         $scope.credits = data.credits;
       });
     }
-  };
-};
-
-var NBeamsCtrl = function ($scope, $rootScope, $modalInstance, $modal, BeamSetupService) {
-  $scope.form = {beams: []};
-  for (var i=0; i < $rootScope.neutron_beams.length; i++) {
-    var b = angular.copy($rootScope.neutron_beams[i]);
-    b.rm = false;
-    $scope.form.beams.push(b);
-  }
-  
-  $scope.confirm = function () {
-    $modal.open({
-      templateUrl: 'modals/confirm.html',
-      controller: ConfirmCtrl,
-      windowClass: 'confirmModal',
-      keyboard: true,
-      resolve: {
-        message: function () { return 'Deleting a Neutron Beam will delete any projects associated with it.'; },
-        f: function () { return $scope.save_beams }
-      }
-    });
-  };
-  
-  $scope.nothing = function () {};
-  $scope.save_beams = function (confirmed) {
-    if (!confirmed) {
-      for (var i=0; i < $scope.form.beams.length; i++) {
-        if ($scope.form.beams[i].rm) {
-          $scope.confirm();
-          return null;
-        }
-      }
-    }
-    
-    else if (confirmed === 'no') {
-      return null;
-    }
-    
-    for (i=0; i < $scope.form.beams.length; i++) {
-      var b = $scope.form.beams[i];
-      
-      if (b.rm) {
-        $rootScope.remove_beam(b.id);
-      }
-      
-      else {
-        var root = $rootScope.get_beam(b.id);
-        root.address = b.address;
-        root.port = b.port;
-        root.secure = b.secure;
-      }
-    }
-    
-    $rootScope.store_beams();
-    $modalInstance.dismiss('save');
-  };
-  
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-  
-  $scope.view_api = function (index, regen) {
-    var b = $scope.form.beams[index];
-    $scope.bname = b.address + ':' + b.port;
-    BeamSetupService.generate_api(b.id, regen, $scope.show_api);
-  };
-  
-  $scope.show_api = function (data) {
-    $modal.open({
-      templateUrl: 'modals/apikey.html',
-      controller: KeyCtrl,
-      windowClass: 'keyModal',
-      keyboard: true,
-      resolve: {
-        server: function () {return $scope.bname},
-        api_key: function () {return data.key}
-      }
-    });
-  };
-};
-
-var KeyCtrl = function ($scope, $rootScope, $modalInstance, server, api_key) {
-  $scope.server = server;
-  $scope.api_key = api_key;
-  
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-  
-  $scope.copy_key = function () {
-    var i = document.querySelector('.api_key input');
-    i.setSelectionRange(0, i.value.length);
-    document.execCommand('copy');
   };
 };
 
@@ -323,36 +220,6 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
         $rootScope.$emit('loadTabs', [r]);
         break;
       }
-    }
-  };
-  
-  $scope.go_to_search = function () {
-    $("#quick-search input").focus().select();
-  };
-  
-  $scope.logout = function () {
-    AuthService.logout();
-  };
-  
-  $scope.login = function () {
-    AuthService.login();
-  };
-  
-  $scope.quick_search = function ($event) {
-    var opts = {
-      needle: $scope.form.qsearch,
-      backwards: false,
-      wrap: true,
-      caseSensitive: false,
-      wholeWord: false,
-      scope: AceSearch.ALL,
-      regExp: false
-    };
-    
-    var search = new AceSearch().set(opts);
-    var range = search.find(Editor.session);
-    if (range) {
-      Editor.session.getSelection().setSelectionRange(range, false);
     }
   };
   
