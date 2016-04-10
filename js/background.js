@@ -22,6 +22,7 @@ function launch_main_window (launchData) {
     chrome.app.window.create('html/main.html', {
       resizable: true,
       id: "ndrive-main",
+      frame: { color: "#263238" },
       bounds: {
         width: width,
         height: height
