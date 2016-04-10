@@ -478,8 +478,12 @@ body.tomorrow_night_eighties-theme .modal-content {
 
 body.tomorrow_night_eighties-theme .ace_search {
   background-color: #263238;
-  border: 1px solid #414141;
-  color: #ccc
+  border: 1px solid #2F8B90;
+  color: #ccc;
+  padding: 8px;
+  right: 30px;
+  top: 15px;
+  border-radius: 0;
 }
 
 body.tomorrow_night_eighties-theme .ace_button {
@@ -494,7 +498,6 @@ body.tomorrow_night_eighties-theme .ace_button:hover {
 body.tomorrow_night_eighties-theme .ace_search_field {
   background-color: #222D32;
   color: #ccc;
-  border-right: 1px solid #414141
 }
 
 body.tomorrow_night_eighties-theme .ace_search_form,
@@ -509,12 +512,14 @@ body.tomorrow_night_eighties-theme .ace_replacebtn {
 }
 
 body.tomorrow_night_eighties-theme .ace_searchbtn_close {
-  color: #ccc
+  color: #2E8489;
+  margin-top: 2px;
 }
 
 body.tomorrow_night_eighties-theme .ace_searchbtn_close:hover {
   background-color: transparent;
-  color: #a94442
+  color: #2E8489;
+  opacity: 0.5;
 }
 
 body.tomorrow_night_eighties-theme #search-tools h4 {
@@ -1178,6 +1183,12 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 .search-toggle {
   max-width: none !important;
+}
+.ace_searchbtn:last-child, .ace_replacebtn:last-child {
+  margin-right: 9px;
+}
+.ace_searchbtn_close {
+  margin-top: 2px;
 }
 /* Let's get this party started */
 ::-webkit-scrollbar {
