@@ -547,7 +547,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #menuBar #buttons {
-  margin: -15px 10px 0 0
+  margin: 0 10px 0 0
 }
 
 #menuBar #buttons .dropdown-menu {
@@ -1175,4 +1175,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 .dropdown-menu .divider {
   opacity: 0.2;
+}
+.search-toggle {
+  max-width: none !important;
 }
