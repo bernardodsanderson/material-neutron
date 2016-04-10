@@ -24,7 +24,7 @@ To Do's:
 - Git support (?)
 
 
-##### Buy me a beer? ![https://cash.me/$BernardoAnderson](https://cash.me/$BernardoAnderson)
+##### Buy me a beer? [https://cash.me/$BernardoAnderson](https://cash.me/$BernardoAnderson)
 
 
 #### A fork of Super Neutron Drive made by [Paul Bailey](https://github.com/pizzapanther/Super-Neutron-Drive).
