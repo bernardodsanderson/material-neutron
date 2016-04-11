@@ -20,7 +20,7 @@
           <a class="prj" ng-click="project.list_dir()" right-click="project.right_menu('dir', project, $event)">
             <span class="fa-stack">
               <i ng-if="project.outline" class="fa fa-square-o fa-stack-2x" ng-class="{'fa-spin': project.working}"></i>
-              <i class="fa {{ project.cls }} fa-stack-1x" ng-class="{'fa-spin': project.working}"></i>
+              <i class="fa {{ project.cls }} fa-stack-1x material-icons" ng-class="{'fa-spin': project.working}">folder_shared</i>
             </span>&nbsp;{{ project.name }}
           </a>
           <ul>

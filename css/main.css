@@ -1187,10 +1187,18 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 .ace_searchbtn_close {
   margin-top: 2px;
 }
-.fa-save:before, .fa-floppy-o:before {
-  font-family: 'Material Icons';
-  content: 'folder_shared';
-}
+/*.fa-save:before, .fa-floppy-o:before {*/
+/*  font-family: 'Material Icons';*/
+/*  content: 'folder_shared';*/
+/*}*/
+/*.fa-folder-open:before {*/
+/*  font-family: 'Material Icons';*/
+/*  content: 'folder_open';*/
+/*}*/
+/*.fa-folder:before {*/
+/*  font-family: 'Material Icons';*/
+/*  content: 'folder';*/
+/*}*/
 .fa-folder-open:before {
   font-family: 'Material Icons';
   content: 'folder_open';
@@ -1199,11 +1207,12 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   font-family: 'Material Icons';
   content: 'folder';
 }
+
 .fa-file-o:before {
   font-family: 'Material Icons';
   content: '';
 }
-.fa {
+.tomorrow_night_eighties-theme .fa {
   font-size: 14px;
 }
 .tomorrow_night_eighties-theme .mdl-checkbox__ripple-container .mdl-ripple {
