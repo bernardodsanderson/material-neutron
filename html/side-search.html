@@ -23,21 +23,18 @@
   <div class="form-group pre-radio">
     <label>Options</label>
   </div>
-  <div class="checkbox">
-    <input type="checkbox" id="search-case-sensitive" ng-model="form.case_sensitive">
-    <label for="search-case-sensitive"></label>
-    <label for="search-case-sensitive" class="real">Case Sensitive</label>
-  </div>
-  <div class="checkbox">
-    <input type="checkbox" id="search-whole-word" ng-model="form.whole_word">
-    <label for="search-whole-word"></label>
-    <label for="search-whole-word" class="real">Whole Word</label>
-  </div>
-  <div class="checkbox">
-    <input type="checkbox" id="search-regex" ng-model="form.regex">
-    <label for="search-regex"></label>
-    <label for="search-regex" class="real">Regex</label>
-  </div>
+  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="search-case-sensitive">
+    <input type="checkbox" id="search-case-sensitive" class="mdl-checkbox__input" ng-model="form.case_sensitive" />
+    Case Sensitive
+  </label>
+  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="search-whole-word">
+    <input type="checkbox" id="search-whole-word" class="mdl-checkbox__input" ng-model="form.whole_word"/>
+    Whole Word
+  </label>
+  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="search-regex">
+    <input type="checkbox" id="search-regex" class="mdl-checkbox__input" ng-model="form.regex"/>
+    Regex
+  </label>
   <hr>
   <div class="form-group">
     <div ng-show="form.context == 'current'">

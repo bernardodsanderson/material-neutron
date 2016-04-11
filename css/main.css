@@ -144,8 +144,8 @@ input[type=radio]:checked+label:after {
 }
 
 .ace_searchbtn_close:after {
-  font-family: FontAwesome;
-  content: "\f05c";
+  font-family: 'Material Icons';
+  content: "close";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -456,7 +456,7 @@ body.tomorrow_night_eighties-theme input[type=radio] {
 
 body.tomorrow_night_eighties-theme input[type=checkbox]+label,
 body.tomorrow_night_eighties-theme input[type=radio]+label {
-  color: #ccc
+  color: #309196;
 }
 
 body.tomorrow_night_eighties-theme .modal-header {
@@ -507,7 +507,6 @@ body.tomorrow_night_eighties-theme .ace_searchbtn,
 body.tomorrow_night_eighties-theme .ace_replacebtn {
   background-color: #222D32;
   border-left: none;
-  padding-right: 27px;
 }
 
 body.tomorrow_night_eighties-theme .ace_searchbtn_close {
@@ -1189,6 +1188,38 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 .ace_searchbtn_close {
   margin-top: 2px;
 }
+.fa-save:before, .fa-floppy-o:before {
+  font-family: 'Material Icons';
+  content: 'folder_shared';
+}
+.fa-folder-open:before {
+  font-family: 'Material Icons';
+  content: 'folder_open';
+}
+.fa-folder:before {
+  font-family: 'Material Icons';
+  content: 'folder';
+}
+.fa-file-o:before {
+  font-family: 'Material Icons';
+  content: '';
+}
+.fa {
+  font-size: 14px;
+}
+.tomorrow_night_eighties-theme .mdl-checkbox__ripple-container .mdl-ripple {
+  background: #309196;
+}
+.tomorrow_night_eighties-theme .mdl-checkbox__box-outline {
+  border: 1px solid #309196;
+}
+
+.tomorrow_night_eighties-theme .ace_searchbtn {
+  min-width: 27px;
+  width: inherit;
+}
+
+
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 8px;
@@ -1211,3 +1242,4 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: #222D32; 
 }
+
