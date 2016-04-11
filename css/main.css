@@ -275,7 +275,7 @@ body.tomorrow_night_eighties-theme #leftSplitter {
 }
 
 body.tomorrow_night_eighties-theme #leftSplitter>div .mover {
-  background-color: #384952;
+  background-color: #263238;
 }
 
 body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu .dropdown-submenu>a:after {
@@ -684,12 +684,11 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #leftSplitter>div .mover {
-  width: 3px;
-  height: 22px;
+  width: 10px;
+  height: 100%;
   position: absolute;
-  top: calc(50% + 5px);
+  top: 0;
   left: 1px;
-  border-radius: 5px;
   cursor: ew-resize
 }
 
