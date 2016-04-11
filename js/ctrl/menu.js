@@ -253,6 +253,8 @@ ndrive.controller('SplitterCtrl', function($scope, $rootScope) {
       $("#mainApp").css('width', 'calc(100% - ' + w + 'px)');
       $("#mainApp").css('left', w + 'px');
       $("#leftSplitter").css('left', '0');
+      $("#leftSide").css('left', '10px');
+      $('#leftSplitter div.mdl-layout__drawer-button').css('left', '-17px');
     }
     
     else {
@@ -264,6 +266,7 @@ ndrive.controller('SplitterCtrl', function($scope, $rootScope) {
       $("#mainApp").css('width', 'calc(100% - ' + w + 'px)');
       $("#mainApp").css('left', w + 'px');
       $("#leftSplitter").css('left', w1 + 'px');
+      $("#leftSide").css('left', '0');
     }
   };
   
