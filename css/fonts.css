@@ -1,20 +1,18 @@
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(/css/open-sans.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Droid Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Sans Mono'), local('DroidSansMono'), url(/css/droid-mono.woff) format('woff');
-}
-
-@font-face {
   font-family: 'VT323';
   font-style: normal;
   font-weight: 400;
   src: local('VT323'), local('VT323-Regular'), url(/css/vt323.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(/lib/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: 'Material Icons';
+  src: url(/lib/fonts/MaterialIcons-Regular.ttf);
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(/lib/fonts/RobotoMono-Regular.ttf);
 }

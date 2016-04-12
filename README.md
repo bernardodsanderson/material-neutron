@@ -15,7 +15,7 @@ Material Neutron allows you to edit code on your local machine.
 - Sublime-compatible keymappings, including multiple cursors and selections
 
 
-![screenshot](https://i.imgur.com/ha3DnGx.jpg)
+![screenshot](https://lh3.googleusercontent.com/0cmVaUqa1mZIVSlxBZ6IEwqPXgsP-4vJFpnSULVUglDjwDvr-mkmmJIYb31tJWHF0ix-LO0TH3E=s640-h400-e365-rw)
 
 To Do's:
 - Better sidebar drawer

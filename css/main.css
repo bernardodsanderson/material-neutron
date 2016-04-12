@@ -9,7 +9,6 @@ body {
 
 #mainWrapper {
   height: 100%;
-  width: 100%
 }
 
 .nfont {
@@ -116,7 +115,7 @@ input[type=radio]:checked+label:after {
 
 .ace_searchbtn.next:after {
   font-family: 'Material Icons';
-  content: "chevron_left";
+  content: "keyboard_arrow_down";
   font-size: 80%;
   position: absolute;
   top: 50%;
@@ -130,7 +129,7 @@ input[type=radio]:checked+label:after {
 
 .ace_searchbtn.prev:after {
   font-family: 'Material Icons';
-  content: "chevron_right";
+  content: "keyboard_arrow_up";
   font-size: 80%;
   position: absolute;
   top: 50%;
@@ -383,7 +382,8 @@ body.tomorrow_night_eighties-theme .modal-content {
 body.tomorrow_night_eighties-theme #rightClickMenu {
   color: #ccc;
   background-color: #263238;
-  border: 1px solid #414141
+  border: 1px solid #309196;
+  border-radius: 0;
 }
 
 body.tomorrow_night_eighties-theme #rightClickMenu a {
@@ -391,7 +391,7 @@ body.tomorrow_night_eighties-theme #rightClickMenu a {
 }
 
 body.tomorrow_night_eighties-theme #rightClickMenu hr {
-  border-top: 1px solid #414141
+  border-top: 1px solid #309196
 }
 
 body.tomorrow_night_eighties-theme select.form-control:after {
@@ -407,7 +407,7 @@ body.tomorrow_night_eighties-theme .preselect {
 }
 
 body.tomorrow_night_eighties-theme .table>thead>tr>th {
-  border-bottom: 2px solid #414141
+  border-bottom: 2px solid #309196
 }
 
 body.tomorrow_night_eighties-theme .table>thead>tr>th,
@@ -918,7 +918,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #editor.ace_editor {
-  font-family: 'Droid Sans Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace
+  font-family: 'Roboto Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace
 }
 
 .prefModal table {
@@ -1225,6 +1225,9 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 .tomorrow_night_eighties-theme .ace_searchbtn {
   min-width: 27px;
   width: inherit;
+}
+.flash-saving {
+  color: #309196;
 }
 
 
