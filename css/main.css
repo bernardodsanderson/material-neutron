@@ -115,8 +115,8 @@ input[type=radio]:checked+label:after {
 }
 
 .ace_searchbtn.next:after {
-  font-family: FontAwesome;
-  content: "\f078";
+  font-family: 'Material Icons';
+  content: "chevron_left";
   font-size: 80%;
   position: absolute;
   top: 50%;
@@ -129,8 +129,8 @@ input[type=radio]:checked+label:after {
 }
 
 .ace_searchbtn.prev:after {
-  font-family: FontAwesome;
-  content: "\f077";
+  font-family: 'Material Icons';
+  content: "chevron_right";
   font-size: 80%;
   position: absolute;
   top: 50%;
@@ -814,7 +814,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 
 #mainApp {
   position: absolute;
-  left: 304px;
+  left: 310px;
   top: 0;
   height: 100%;
   width: calc(100% - 309px);
