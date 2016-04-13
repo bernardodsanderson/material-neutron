@@ -688,7 +688,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 1px;
+  left: 0;
   cursor: ew-resize
 }
 
