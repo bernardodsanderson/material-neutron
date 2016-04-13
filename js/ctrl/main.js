@@ -75,24 +75,24 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     }
   };
   
-  $scope.load_suggestions = function (event, word, range) {
-    var suggestions = SpellCheck.dictionary.suggest(word);
-    $scope.suggestions_menu = [];
-    $scope.suggestions = [];
-    $scope.hide_right();
+  // $scope.load_suggestions = function (event, word, range) {
+  //   var suggestions = SpellCheck.dictionary.suggest(word);
+  //   $scope.suggestions_menu = [];
+  //   $scope.suggestions = [];
+  //   $scope.hide_right();
     
-    if (suggestions && suggestions.length > 0) {
-      for (var i=0; i < suggestions.length; i++) {
-        $scope.suggestions.push({range: range, fix: suggestions[i]});
-      }
-      $scope.suggestions_menu = [['Suggestions', 'life-ring', $scope.hide_right], '-'];
-      $scope.generate_spell_menu(event, 0);
-    }
+  //   if (suggestions && suggestions.length > 0) {
+  //     for (var i=0; i < suggestions.length; i++) {
+  //       $scope.suggestions.push({range: range, fix: suggestions[i]});
+  //     }
+  //     $scope.suggestions_menu = [['Suggestions', 'life-ring', $scope.hide_right], '-'];
+  //     $scope.generate_spell_menu(event, 0);
+  //   }
     
-    else {
-      $rootScope.$emit('showRightMenu', event, [['No Suggestions Available', 'exclamation-triangle', $scope.hide_right]]);
-    }
-  };
+  //   else {
+  //     $rootScope.$emit('showRightMenu', event, [['No Suggestions Available', 'exclamation-triangle', $scope.hide_right]]);
+  //   }
+  // };
   
   $scope.editor_right_click = function (event) {
     var c = Editor.getCursorPosition();
@@ -141,13 +141,13 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     session.setTabSize(PREFS.tabsize);
     session.setUseSoftTabs(PREFS.softab);
     
-    if (PREFS.spellcheck) {
-      SpellCheck._spell_check(null, session);
-    }
+    // if (PREFS.spellcheck) {
+    //   SpellCheck._spell_check(null, session);
+    // }
     
-    else {
-      SpellCheck.clear_markers(session, true);
-    }
+    // else {
+    //   SpellCheck.clear_markers(session, true);
+    // }
     
     switch (PREFS.soft_wrap) {
       case "off":
@@ -190,15 +190,15 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     Editor.renderer.setShowGutter(PREFS.gutter);
     Editor.renderer.setShowPrintMargin(PREFS.pmargin);
     Editor.renderer.setPrintMarginColumn(PREFS.print_margin);
-    Editor.setOption('enableSnippets', true);
-    Editor.setOption('enableBasicAutocompletion', true);
+    // Editor.setOption('enableSnippets', true);
+    // Editor.setOption('enableBasicAutocompletion', true);
     
     if (PREFS.autocomplete) {
-      Editor.setOption('enableLiveAutocompletion', true);
+      // Editor.setOption('enableLiveAutocompletion', true);
     }
     
     else {
-      Editor.setOption('enableLiveAutocompletion', false);
+      // Editor.setOption('enableLiveAutocompletion', false);
     }
     
     $('body').attr("class", PREFS.theme + "-theme");
@@ -235,8 +235,8 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     var session = new EditSession(text);
     session.setUndoManager(new UndoManager());
     session.setMode("ace/mode/" + $scope.get_mode(file.name));
-    SpellCheck._spell_check(null, session);
-    SpellCheck.bind_spellcheck(session, debounce);
+    // SpellCheck._spell_check(null, session);
+    // SpellCheck.bind_spellcheck(session, debounce);
     
     $scope.set_session_prefs(session);
     $scope.set_editor_prefs();
@@ -417,17 +417,17 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     }
   };
   
-  $scope.toggle_spellcheck = function (event) {
-    if (PREFS.spellcheck) {
-      $scope.set_prefs(true, {spellcheck: false});
-    }
+  // $scope.toggle_spellcheck = function (event) {
+  //   if (PREFS.spellcheck) {
+  //     $scope.set_prefs(true, {spellcheck: false});
+  //   }
     
-    else {
-      $scope.set_prefs(true, {spellcheck: true});
-    }
+  //   else {
+  //     $scope.set_prefs(true, {spellcheck: true});
+  //   }
     
     
-  };
+  // };
   
   $scope.close_tab = function (event) {
     $scope.remove_tab($scope.current_tab);
@@ -535,7 +535,7 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
   $rootScope.$on('keyboard-error-sim', $scope.error_simulation);
   $rootScope.$on('keyboard-save', $scope.save_current);
   $rootScope.$on('keyboard-save-all', $scope.save_all);
-  $rootScope.$on('keyboard-spellcheck', $scope.toggle_spellcheck);
+  // $rootScope.$on('keyboard-spellcheck', $scope.toggle_spellcheck);
   $rootScope.$on('keyboard-close-tab', $scope.close_tab);
   $rootScope.$on('keyboard-close-tabs-all', $scope.close_tab_all);
 });

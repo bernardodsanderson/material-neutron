@@ -39,10 +39,10 @@ function report_error (error, data) {
 ndrive.run(function ($rootScope, $modal, $q) {
   $rootScope.manifest = chrome.runtime.getManifest();
   
-  $rootScope.server_url = 'https://super.neutrondrive.com';
-  if ($rootScope.manifest.server_url) {
-    $rootScope.server_url = $rootScope.manifest.server_url;
-  }
+  // $rootScope.server_url = 'https://super.neutrondrive.com';
+  // if ($rootScope.manifest.server_url) {
+  //   $rootScope.server_url = $rootScope.manifest.server_url;
+  // }
   
   $rootScope.google_accounts = [];
   $rootScope.neutron_beams = [];
@@ -51,6 +51,7 @@ ndrive.run(function ($rootScope, $modal, $q) {
   $rootScope.load_editor = function () {
     Editor = ace.edit("editor");
     Editor.setTheme("ace/theme/tomorrow_night_eighties");
+    Editor.renderer.setScrollMargin(0, 10, 0, 0);
     
     $rootScope.load_commands(0);
   };
