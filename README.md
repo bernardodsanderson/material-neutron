@@ -26,4 +26,7 @@ To Do's:
 ##### Buy me a beer? [https://cash.me/$BernardoAnderson](https://cash.me/$BernardoAnderson)
 
 
+
+[![Chrome Store Link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_496x150.png)](https://chrome.google.com/webstore/detail/material-neutron/dnpfikbaljjobebldaaloaaijfcgofbk)
+
 #### A fork of Super Neutron Drive made by [Paul Bailey](https://github.com/pizzapanther/Super-Neutron-Drive).
