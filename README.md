@@ -27,6 +27,6 @@ To Do's:
 
 
 
-[![Chrome Store Link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_496x150.png)](https://chrome.google.com/webstore/detail/material-neutron/dnpfikbaljjobebldaaloaaijfcgofbk)
+[![Chrome Store Link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/material-neutron/dnpfikbaljjobebldaaloaaijfcgofbk)
 
 #### A fork of Super Neutron Drive made by [Paul Bailey](https://github.com/pizzapanther/Super-Neutron-Drive).
