@@ -283,17 +283,21 @@ body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu .dropdown-su
 
 body.tomorrow_night_eighties-theme #leftSide .menu {
   /*border-bottom: 1px solid #414141*/
+  border-right: 3px solid #263238;
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li {
   /*border-right: 1px solid #414141*/
   opacity: 0.6;
   font-size: 12px;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li.active {
   opacity: 1;
-  border-bottom: 2px solid #309196;
+  /*border-right: 2px solid #309196;*/
 }
 
 body.tomorrow_night_eighties-theme #leftSide .side-tool {
@@ -677,7 +681,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   display: block;
   top: calc(50% - 22px);
   font-size: 12px;
-  left: 0;
+  left: 2px;
   cursor: pointer;
   padding: 5px 1px;
   margin: 0 0 5px 0
@@ -711,6 +715,10 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   padding: 0 5px 0 0;
   height: 29px;
   margin-bottom: -1px;
+  float: left;
+  width: 15%;
+  background-color: #222D32;
+  height: 100%;
 }
 
 #leftSide .menu .btn {
@@ -750,9 +758,10 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #leftSide .side-tool {
-  height: calc(100% - 28px);
-  width: 100%;
-  overflow: auto
+  height: 100%;
+  width: 85%;
+  overflow: auto;
+  float: right;
 }
 
 #leftSide #projects>div {
@@ -770,6 +779,10 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   margin: 8px 0 5px 0;
   padding: 0 0 5px 5px;
   width: 100%
+}
+
+#leftSide #projects ul.project:first-child {
+  margin-top: 3px;
 }
 
 #leftSide #projects ul.project a.psort {
