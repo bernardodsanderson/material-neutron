@@ -60,20 +60,20 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     $scope.hide_right();
   };
   
-  $scope.generate_spell_menu = function (event, i) {
-    $scope.suggestions_menu.push([
-      $scope.suggestions[i].fix, '', function () { $scope.fix_word(i); }]);
+  // $scope.generate_spell_menu = function (event, i) {
+  //   $scope.suggestions_menu.push([
+  //     $scope.suggestions[i].fix, '', function () { $scope.fix_word(i); }]);
       
-    if (i + 1 < $scope.suggestions.length) {
-      $scope.generate_spell_menu(event, i + 1);
-    }
+  //   if (i + 1 < $scope.suggestions.length) {
+  //     $scope.generate_spell_menu(event, i + 1);
+  //   }
     
-    else {
-      $scope.suggestions_menu.push('-');
-      $scope.suggestions_menu.push(['Cancel', 'times', $scope.hide_right]);
-      $rootScope.$emit('showRightMenu', event, $scope.suggestions_menu);
-    }
-  };
+  //   else {
+  //     $scope.suggestions_menu.push('-');
+  //     $scope.suggestions_menu.push(['Cancel', 'times', $scope.hide_right]);
+  //     $rootScope.$emit('showRightMenu', event, $scope.suggestions_menu);
+  //   }
+  // };
   
   // $scope.load_suggestions = function (event, word, range) {
   //   var suggestions = SpellCheck.dictionary.suggest(word);

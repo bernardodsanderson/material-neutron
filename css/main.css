@@ -116,7 +116,7 @@ input[type=radio]:checked+label:after {
 .ace_searchbtn.next:after {
   font-family: 'Material Icons';
   content: "keyboard_arrow_down";
-  font-size: 80%;
+  font-size: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -130,7 +130,7 @@ input[type=radio]:checked+label:after {
 .ace_searchbtn.prev:after {
   font-family: 'Material Icons';
   content: "keyboard_arrow_up";
-  font-size: 80%;
+  font-size: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -283,7 +283,7 @@ body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu .dropdown-su
 
 body.tomorrow_night_eighties-theme #leftSide .menu {
   /*border-bottom: 1px solid #414141*/
-  border-right: 3px solid #263238;
+  border-right: 2px solid #263238;
 }
 
 body.tomorrow_night_eighties-theme #leftSide .tools ul li {
@@ -301,7 +301,8 @@ body.tomorrow_night_eighties-theme #leftSide .tools ul li.active {
 }
 
 body.tomorrow_night_eighties-theme #leftSide .side-tool {
-  background-color: #222D32
+  background-color: #222D32;
+  overflow-x: hidden;
 }
 
 body.tomorrow_night_eighties-theme #leftSide #projects ul.project {
@@ -476,14 +477,19 @@ body.tomorrow_night_eighties-theme .modal-content {
 }
 
 body.tomorrow_night_eighties-theme .ace_search {
-  background-color: #263238;
-  border: 1px solid #2F8B90;
+  background-color: rgba(38, 50, 56, 0);
+  border: 1px solid #263238;
   color: #ccc;
   padding: 8px;
-  right: 30px;
-  top: 15px;
   border-radius: 0;
-  max-width: 332px;
+  max-width: none;
+  position: relative;
+  bottom: 0px;
+  height: 12%;
+  top: 88%;
+  width: 50%;
+  right: 5px;
+  float: right;
 }
 
 body.tomorrow_night_eighties-theme .ace_button {
@@ -500,17 +506,35 @@ body.tomorrow_night_eighties-theme .ace_search_field {
   background-color: #222D32;
   color: #ccc;
   border-right: none;
+  width: 70%;
+}
+
+body.tomorrow_night_eighties-theme .ace_replace_form .ace_search_field {
+  width: 70%;
 }
 
 body.tomorrow_night_eighties-theme .ace_search_form,
 body.tomorrow_night_eighties-theme .ace_replace_form {
   border: none;
+  width: 100%;
+}
+body.tomorrow_night_eighties-theme .ace_replace_form {
+  display: block !important;
 }
 
 body.tomorrow_night_eighties-theme .ace_searchbtn,
 body.tomorrow_night_eighties-theme .ace_replacebtn {
   background-color: #222D32;
   border-left: none;
+  width: 10%;
+}
+
+body.tomorrow_night_eighties-theme .ace_replacebtn {
+  width: 12%;
+}
+
+body.tomorrow_night_eighties-theme .ace_replacebtn:nth-child(2){
+  width: 18%;
 }
 
 body.tomorrow_night_eighties-theme .ace_searchbtn_close {
@@ -546,7 +570,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 
 
 #menuBar {
-  height: 45px
+  height: 40px;
 }
 
 #menuBar .btn {
@@ -573,8 +597,8 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #menuBar .pull-left img {
-  width: 32px;
-  margin: 5px 10px 0 10px;
+  width: 29px;
+  margin: 8px 10px 0 10px;
   display: block;
   float: left
 }
@@ -644,7 +668,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 }
 
 #appWrapper {
-  height: calc(100% - 42px);
+  height: calc(100% - 40px);
   position: relative
 }
 
@@ -665,7 +689,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   left: 300px;
   top: 0;
   height: 100%;
-  width: 10px;
+  width: 5px;
   z-index: 10;
   margin-top: 28px;
 }
@@ -681,14 +705,14 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   display: block;
   top: calc(50% - 22px);
   font-size: 12px;
-  left: 2px;
+  left: 0;
   cursor: pointer;
   padding: 5px 1px;
   margin: 0 0 5px 0
 }
 
 #leftSplitter>div .mover {
-  width: 10px;
+  width: 5px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -716,7 +740,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
   height: 29px;
   margin-bottom: -1px;
   float: left;
-  width: 15%;
+  width: 42px;
   background-color: #222D32;
   height: 100%;
 }
@@ -759,7 +783,7 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 
 #leftSide .side-tool {
   height: 100%;
-  width: 85%;
+  width: calc(100% - 42px);
   overflow: auto;
   float: right;
 }
@@ -827,10 +851,10 @@ body.tomorrow_night_eighties-theme #webViews .cancel .btn {
 
 #mainApp {
   position: absolute;
-  left: 310px;
+  left: 305px;
   top: 0;
   height: 100%;
-  width: calc(100% - 309px);
+  width: calc(100% - 305px);
   vertical-align: top;
   z-index: 20
 }
