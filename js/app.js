@@ -104,38 +104,38 @@ ndrive.run(function ($rootScope, $modal, $q) {
     return null;
   };
   
-  $rootScope.get_beam = function (id) {
-    for (var i=0; i < $rootScope.neutron_beams.length; i++) {
-      if ($rootScope.neutron_beams[i].id == id) {
-        return $rootScope.neutron_beams[i];
-      }
-    }
+  // $rootScope.get_beam = function (id) {
+  //   for (var i=0; i < $rootScope.neutron_beams.length; i++) {
+  //     if ($rootScope.neutron_beams[i].id == id) {
+  //       return $rootScope.neutron_beams[i];
+  //     }
+  //   }
     
-    return null;
-  };
+  //   return null;
+  // };
   
-  $rootScope.remove_beam = function (id) {
-    var b = null;
+  // $rootScope.remove_beam = function (id) {
+  //   var b = null;
     
-    for (var i=0; i < $rootScope.neutron_beams.length; i++) {
-      if ($rootScope.neutron_beams[i].id == id) {
-        b = i;
-        break;
-      }
-    }
+  //   for (var i=0; i < $rootScope.neutron_beams.length; i++) {
+  //     if ($rootScope.neutron_beams[i].id == id) {
+  //       b = i;
+  //       break;
+  //     }
+  //   }
     
-    if (b !== null) {
-      $rootScope.neutron_beams.splice(b, 1);
-      $rootScope.$emit('remove-beam-project', id);
-    }
-  };
+  //   if (b !== null) {
+  //     $rootScope.neutron_beams.splice(b, 1);
+  //     $rootScope.$emit('remove-beam-project', id);
+  //   }
+  // };
   
-  $rootScope.store_beams = function () {
-    chrome.storage.sync.set({'neutron_beams': JSON.stringify($rootScope.neutron_beams)}, function() {
-      console.log('Beams saved');
-      console.log($rootScope.neutron_beams);
-    });
-  };
+  // $rootScope.store_beams = function () {
+  //   chrome.storage.sync.set({'neutron_beams': JSON.stringify($rootScope.neutron_beams)}, function() {
+  //     console.log('Beams saved');
+  //     console.log($rootScope.neutron_beams);
+  //   });
+  // };
   
   $rootScope.get_beams = function () {
     var deferred = $q.defer();

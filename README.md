@@ -7,6 +7,7 @@ Material Neutron allows you to edit code on your local machine.
 
 
 - Completely offline
+- Fast!
 - Tabbed editing
 - Syntax highlighting for many languages
 - Remembers/restores open tabs
@@ -15,12 +16,12 @@ Material Neutron allows you to edit code on your local machine.
 - Sublime-compatible keymappings, including multiple cursors and selections
 
 
-![screenshot](https://lh3.googleusercontent.com/0cmVaUqa1mZIVSlxBZ6IEwqPXgsP-4vJFpnSULVUglDjwDvr-mkmmJIYb31tJWHF0ix-LO0TH3E=s640-h400-e365-rw)
+![screenshot](https://lh3.googleusercontent.com/U4wiVz8tdJ-dAJ53OgntvbTdCNi7I9sx48p0M_n-O42VFFd4TLCGcvF80r_PScAHWyPLT0wB=s1280-h800-e365-rw)
 
 To Do's:
-- Better sidebar drawer
 - Clean up unsued code
-- Git support (?)
+- SFTP support
+- Git support
 
 
 ##### Buy me a beer? [https://cash.me/$BernardoAnderson](https://cash.me/$BernardoAnderson)

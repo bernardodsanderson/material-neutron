@@ -485,8 +485,8 @@ body.tomorrow_night_eighties-theme .ace_search {
   max-width: none;
   position: relative;
   bottom: 0px;
-  height: 12%;
-  top: 88%;
+  height: 100px;
+  top: calc(100% - 100px);
   width: 50%;
   right: 5px;
   float: right;

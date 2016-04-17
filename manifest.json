@@ -1,8 +1,8 @@
 {
   "name": "Material Neutron",
   "short_name": "Material Neutron",
-  "description": "A material designed code editor",
-  "version": "1.0.8",
+  "description": "A fast and beautiful material designed code editor and text editor",
+  "version": "1.0.9",
   
   "app": {
     "background": {
