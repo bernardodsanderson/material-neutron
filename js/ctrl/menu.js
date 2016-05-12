@@ -26,25 +26,6 @@ var PrefCtrl = function ($scope, $rootScope, $modalInstance) {
   };
 };
 
-
-var HelpCtrl = function ($scope, $rootScope, $modalInstance, NeutronService, version) {
-  $scope.version = version;
-  $scope.credits = null;
-  
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-  
-  
-  $scope.get_credits = function () {
-    if (!$scope.credits) {
-      NeutronService.get_credits().success(function (data) {
-        $scope.credits = data.credits;
-      });
-    }
-  };
-};
-
 var ConfirmCtrl = function ($scope, $rootScope, $modalInstance, message, f) {
   $scope.f = f;
   $scope.message = message;
@@ -66,42 +47,42 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
   $scope.form = {qsearch: ''};
   $scope.update = null;
   
-  $scope.show_update = function ($event, details) {
-    $scope.update = details;
-  };
+  // $scope.show_update = function ($event, details) {
+  //   $scope.update = details;
+  // };
   
-  $scope.do_update = function (answer) {
-    if (answer == 'yes') {
-      chrome.runtime.reload();
-    }
-  };
+  // $scope.do_update = function (answer) {
+  //   if (answer == 'yes') {
+  //     chrome.runtime.reload();
+  //   }
+  // };
   
-  $scope.check_update = function () {
-    chrome.runtime.requestUpdateCheck(function(status) {
-      if (status == "update_available") {
-        $modal.open({
-          templateUrl: 'modals/confirm.html',
-          controller: ConfirmCtrl,
-          windowClass: 'confirmModal',
-          keyboard: true,
-          resolve: {
-            message: function () { return 'An update is available upon restarting the app.'; },
-            f: function () { return $scope.do_update }
-          }
-        });
-      }
+  // $scope.check_update = function () {
+  //   chrome.runtime.requestUpdateCheck(function(status) {
+  //     if (status == "update_available") {
+  //       $modal.open({
+  //         templateUrl: 'modals/confirm.html',
+  //         controller: ConfirmCtrl,
+  //         windowClass: 'confirmModal',
+  //         keyboard: true,
+  //         resolve: {
+  //           message: function () { return 'An update is available upon restarting the app.'; },
+  //           f: function () { return $scope.do_update }
+  //         }
+  //       });
+  //     }
       
-      else {
-        $rootScope.modal = $modal.open({
-          templateUrl: 'modals/message.html',
-          controller: ModalInstanceCtrl,
-          windowClass: 'loadingModal messageModal',
-          keyboard: true,
-          resolve: {message: function () { return 'No update is available'; }}
-        });
-      }
-    });
-  };
+  //     else {
+  //       $rootScope.modal = $modal.open({
+  //         templateUrl: 'modals/message.html',
+  //         controller: ModalInstanceCtrl,
+  //         windowClass: 'loadingModal messageModal',
+  //         keyboard: true,
+  //         resolve: {message: function () { return 'No update is available'; }}
+  //       });
+  //     }
+  //   });
+  // };
   
   $scope.hide_right = function () {
     $rootScope.$emit('hideRightMenu');
@@ -143,43 +124,39 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
     );
   };
   
-  $scope.nbeams_modal = function () {
-    $modal.open({
-      templateUrl: 'modals/beams.html',
-      controller: NBeamsCtrl,
-      windowClass: 'beamsModal',
-      keyboard: true,
-      size: 'lg',
-      resolve: {}
-    });
-  };
+  // $scope.nbeams_modal = function () {
+  //   $modal.open({
+  //     templateUrl: 'modals/beams.html',
+  //     controller: NBeamsCtrl,
+  //     windowClass: 'beamsModal',
+  //     keyboard: true,
+  //     size: 'lg',
+  //     resolve: {}
+  //   });
+  // };
   
-  $scope.help_modal = function () {
-    var version = $rootScope.manifest.version;
+  // $scope.help_modal = function () {
+  //   var version = $rootScope.manifest.version;
     
-    $modal.open({
-      templateUrl: 'modals/help.html',
-      controller: HelpCtrl,
-      windowClass: 'helpModal',
-      keyboard: true,
-      size: 'lg',
-      resolve: {version: function () { return version; }}
-    });
-  };
+  //   $modal.open({
+  //     templateUrl: 'modals/help.html',
+  //     controller: HelpCtrl,
+  //     windowClass: 'helpModal',
+  //     keyboard: true,
+  //     size: 'lg',
+  //     resolve: {version: function () { return version; }}
+  //   });
+  // };
   
-  $scope.donate_modal = function () {
-    $modal.open({
-      templateUrl: 'modals/donate.html',
-      controller: DonateCtrl,
-      windowClass: 'donateModal',
-      keyboard: true,
-      resolve: {}
-    });
-  };
-  
-  $scope.send_event = function (event) {
-    $rootScope.$emit(event);
-  };
+  // $scope.donate_modal = function () {
+  //   $modal.open({
+  //     templateUrl: 'modals/donate.html',
+  //     controller: DonateCtrl,
+  //     windowClass: 'donateModal',
+  //     keyboard: true,
+  //     resolve: {}
+  //   });
+  // };
   
   $scope.add_recent = function (event, file) {
     for (var i=0; i < $scope.recent_files.length; i++) {
@@ -223,6 +200,10 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
     }
   };
   
+  $scope.send_event = function (event) {
+    $rootScope.$emit(event);
+  };
+  
   $scope.focus_editor = function ($event) {
     Editor.focus();
     
@@ -230,12 +211,12 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
     return false;
   };
   
-  $rootScope.$on('addMessage', $scope.add_message);
-  $rootScope.$on('removeMessage', $scope.remove_message);
-  $rootScope.$on('donateModal', $scope.donate_modal);
   $rootScope.$on('addRecent', $scope.add_recent);
   $rootScope.$on('restoreRecent', $scope.restore_recent);
   $rootScope.$on('showUpdate', $scope.show_update);
+  $rootScope.$on('addMessage', $scope.add_message);
+  $rootScope.$on('removeMessage', $scope.remove_message);
+  // $rootScope.$on('donateModal', $scope.donate_modal);
   
   $rootScope.$on('keyboard-quick-search', $scope.go_to_search);
 });

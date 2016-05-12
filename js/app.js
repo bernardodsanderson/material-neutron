@@ -9,6 +9,7 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, message) {
 var Editor = null;
 var EditSession = require('ace/edit_session').EditSession;
 var UndoManager = require("ace/undomanager").UndoManager;
+var EnableEmmet = require("ace/ext/emmet");
 
 var ndrive = angular.module('ndrive', ['ui.utils', 'ui.bootstrap', 'debounce']);
 
@@ -20,7 +21,7 @@ var show_update;
 ndrive.factory('$exceptionHandler', function ($log) {
   return function (exception, cause) {
     LAST_EXCEPTION = exception;
-    report_error(exception.message, {cause: '' + cause + '', stack: exception.stack});
+    // report_error(exception.message, {cause: '' + cause + '', stack: exception.stack});
     
     //default action taken by angular
     $log.error.apply($log, arguments);
@@ -39,10 +40,10 @@ function report_error (error, data) {
 ndrive.run(function ($rootScope, $modal, $q) {
   $rootScope.manifest = chrome.runtime.getManifest();
   
-  // $rootScope.server_url = 'https://super.neutrondrive.com';
-  // if ($rootScope.manifest.server_url) {
-  //   $rootScope.server_url = $rootScope.manifest.server_url;
-  // }
+  $rootScope.server_url = 'https://super.neutrondrive.com';
+  if ($rootScope.manifest.server_url) {
+    $rootScope.server_url = $rootScope.manifest.server_url;
+  }
   
   $rootScope.google_accounts = [];
   $rootScope.neutron_beams = [];

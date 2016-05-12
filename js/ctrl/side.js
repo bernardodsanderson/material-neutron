@@ -54,42 +54,42 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
     return $scope.gdriveUi() && $scope.form.google_account !== '';
   };
   
-  $scope.google_account_choosen = function () {
-    if ($scope.form.google_account && $scope.form.google_account.value === 'add-google') {
-      $scope.form.google_account = '';
-      $rootScope.$emit('add-google-account');
-    }
+  // $scope.google_account_choosen = function () {
+  //   if ($scope.form.google_account && $scope.form.google_account.value === 'add-google') {
+  //     $scope.form.google_account = '';
+  //     $rootScope.$emit('add-google-account');
+  //   }
     
-    else if ($scope.form.google_account) {
-      var account = $rootScope.get_account($scope.form.google_account.value);
-      if (!account.webview) {
-        $rootScope.$emit('google-account-init', account);
-      }
-    }
-  };
+  //   else if ($scope.form.google_account) {
+  //     var account = $rootScope.get_account($scope.form.google_account.value);
+  //     if (!account.webview) {
+  //       $rootScope.$emit('google-account-init', account);
+  //     }
+  //   }
+  // };
   
   
   $scope.mainView = function () {
     return $scope.view === 'main';
   };
   
-  $scope.google_added = function (event, id) {
-    var account = $rootScope.get_account(id);
-    $scope.google_accounts.push({name: account.name, value: account.id});
-    $scope.form.google_account = $scope.google_accounts[$scope.google_accounts.length - 1];
-    apply_updates($scope);
-  };
+  // $scope.google_added = function (event, id) {
+  //   var account = $rootScope.get_account(id);
+  //   $scope.google_accounts.push({name: account.name, value: account.id});
+  //   $scope.form.google_account = $scope.google_accounts[$scope.google_accounts.length - 1];
+  //   apply_updates($scope);
+  // };
   
-  $scope.choose_google_dir = function () {
-    var account = $rootScope.get_account($scope.form.google_account.value);
-    if (account.webview) {
-      $rootScope.$emit('google-picker-folder', $scope.form.google_account.value);
-    }
+  // $scope.choose_google_dir = function () {
+  //   var account = $rootScope.get_account($scope.form.google_account.value);
+  //   if (account.webview) {
+  //     $rootScope.$emit('google-picker-folder', $scope.form.google_account.value);
+  //   }
     
-    else {
-      $rootScope.error_message('Google account has not been authenicated.');
-    }
-  };
+  //   else {
+  //     $rootScope.error_message('Google account has not been authenicated.');
+  //   }
+  // };
   
   $scope.folder_picked = function (event, folderId) {
     $scope.form.folderId = folderId;
@@ -385,11 +385,7 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
   window.load_local_files = $rootScope.load_local_files;
   $rootScope.get_beams().then(function () {
     LocalFS.load_projects($scope, $q).then(function () {
-      GDriveFS.load_projects($scope, $q).then(function () {
-        NBeamFS.load_projects($scope, $q).then($scope.restore_project_order).then(function () {
-          $rootScope.$emit('reopenTabs');
-        });
-      });
+      $rootScope.$emit('reopenTabs');
     });
   });
 });

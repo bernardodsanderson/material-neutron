@@ -726,13 +726,6 @@ var MODES = {
     name: 'YAML',
     ext: ['yaml', 'yml'],
     cat: MODE_CATS.M
-  },
-  
-  
-  "minecraft": {
-    name: 'Minecraft',
-    ext: ['mcc'],
-    cat: MODE_CATS.O
   }
 };
 
