@@ -2,7 +2,7 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
   $scope.view = 'main';
   $scope.project_types = [
     {name: 'Local', cls: 'LocalFS'},
-    // {name: 'Google Drive', cls: 'GDriveFS'}
+    {name: 'Google Drive', cls: 'GDriveFS'}
   ];
   $scope.google_accounts = [
     {name: 'Add An Account', value: 'add-google'}
@@ -54,42 +54,40 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
     return $scope.gdriveUi() && $scope.form.google_account !== '';
   };
   
-  // $scope.google_account_choosen = function () {
-  //   if ($scope.form.google_account && $scope.form.google_account.value === 'add-google') {
-  //     $scope.form.google_account = '';
-  //     $rootScope.$emit('add-google-account');
-  //   }
-    
-  //   else if ($scope.form.google_account) {
-  //     var account = $rootScope.get_account($scope.form.google_account.value);
-  //     if (!account.webview) {
-  //       $rootScope.$emit('google-account-init', account);
-  //     }
-  //   }
-  // };
+  $scope.google_account_choosen = function () {
+    if ($scope.form.google_account && $scope.form.google_account.value === 'add-google') {
+      $scope.form.google_account = '';
+      $rootScope.$emit('add-google-account');
+    } else if ($scope.form.google_account) {
+      var account = $rootScope.get_account($scope.form.google_account.value);
+      if (!account.webview) {
+        $rootScope.$emit('google-account-init', account);
+      }
+    }
+  };
   
   
   $scope.mainView = function () {
     return $scope.view === 'main';
   };
   
-  // $scope.google_added = function (event, id) {
-  //   var account = $rootScope.get_account(id);
-  //   $scope.google_accounts.push({name: account.name, value: account.id});
-  //   $scope.form.google_account = $scope.google_accounts[$scope.google_accounts.length - 1];
-  //   apply_updates($scope);
-  // };
+  $scope.google_added = function (event, id) {
+    var account = $rootScope.get_account(id);
+    $scope.google_accounts.push({name: account.name, value: account.id});
+    $scope.form.google_account = $scope.google_accounts[$scope.google_accounts.length - 1];
+    apply_updates($scope);
+  };
   
-  // $scope.choose_google_dir = function () {
-  //   var account = $rootScope.get_account($scope.form.google_account.value);
-  //   if (account.webview) {
-  //     $rootScope.$emit('google-picker-folder', $scope.form.google_account.value);
-  //   }
+  $scope.choose_google_dir = function () {
+    var account = $rootScope.get_account($scope.form.google_account.value);
+    if (account.webview) {
+      $rootScope.$emit('google-picker-folder', $scope.form.google_account.value);
+    }
     
-  //   else {
-  //     $rootScope.error_message('Google account has not been authenicated.');
-  //   }
-  // };
+    else {
+      $rootScope.error_message('Google account has not been authenicated.');
+    }
+  };
   
   $scope.folder_picked = function (event, folderId) {
     $scope.form.folderId = folderId;
@@ -367,9 +365,9 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
   chrome.storage.local.get('support_shown', function (obj) {
     if (obj && obj.support_shown) {
       //show every 6 months
-      if (Date.now() - obj.support_shown > 6 * 30 * 24 * 60 * 60 * 1000) {
-        $scope.support_shown();
-      }
+      // if (Date.now() - obj.support_shown > 6 * 30 * 24 * 60 * 60 * 1000) {
+      //   $scope.support_shown();
+      // }
     }
     
     else {
@@ -385,7 +383,9 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
   window.load_local_files = $rootScope.load_local_files;
   $rootScope.get_beams().then(function () {
     LocalFS.load_projects($scope, $q).then(function () {
-      $rootScope.$emit('reopenTabs');
+      GDriveFS.load_projects($scope, $q).then(function () {
+        $rootScope.$emit('reopenTabs');
+      });
     });
   });
 });
