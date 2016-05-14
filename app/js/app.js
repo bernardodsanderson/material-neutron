@@ -40,10 +40,10 @@ function report_error (error, data) {
 ndrive.run(function ($rootScope, $modal, $q) {
   $rootScope.manifest = chrome.runtime.getManifest();
   
-  $rootScope.server_url = 'https://bernardodsanderson.gitlab.io/material-neutron';
-  // if ($rootScope.manifest.server_url) {
-  //   $rootScope.server_url = $rootScope.manifest.server_url;
-  // }
+  $rootScope.server_url = 'https://bernardodsanderson.gitlab.io/material-neutron/';
+  if ($rootScope.manifest.server_url) {
+    $rootScope.server_url = $rootScope.manifest.server_url;
+  }
   
   $rootScope.google_accounts = [];
   $rootScope.neutron_beams = [];
