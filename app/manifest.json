@@ -25,7 +25,8 @@
     "clipboardWrite",
     {"fileSystem": ["write", "retainEntries", "directory"]},
     
-    "https://drive.google.com/*"
+    "https://drive.google.com/*",
+    "https://bernardodsanderson.gitlab.io/*"
   ],
   
   "file_handlers": {

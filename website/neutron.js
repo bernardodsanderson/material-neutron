@@ -14,7 +14,7 @@ var Neutron = {
 
 Neutron.auth_init = function (setkey, force_slow) {
   if (setkey) {
-    gapi.client.setApiKey(GOOGLE_KEY);
+    gapi.client.setApiKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv+ScbOn8kmFojeILhW1qRGQwvMGfgptHyVN/W4mLNxdqCPMZEnstAPHPPDSUaFrYTkZFmKOSkuMqOSSQV3n8HbT9DnEeZ31+z+B+AoOlPoDnLjIyx2mlDC0UC5IVwbDSZwmwe+2pKkap+lPpzUJYGc8e/ZhmPzOMhJXcSIvgqLlxijtGYR3E+LHr2QtQAKF0AHZPdBd2pA89mpyQyROPFzOYc3eUBB4tB6r/rHoSbJEB/SAZwmyWbxt9OZ/81PlbOh/ZGk/EnRna3yqQmVTkuSEHP3S5OHI3C+osDYuSmI0nTCpQlkjcfD1NebMxbIfKLBD2lUUBcHJxXOVbAJAgwQIDAQAB");
   }
   
   if (!Neutron.parent) {
@@ -36,7 +36,7 @@ Neutron.auth_init = function (setkey, force_slow) {
   }
   
   var options = {
-    client_id: GOOGLE_CLIENT_ID,
+    client_id: "1029726201570-7kbmiueh1b6m4vtpna91idk4iivorerv.apps.googleusercontent.com",
     immediate: immediateAuth,
     scope: [
       'https://www.googleapis.com/auth/drive',
