@@ -2,11 +2,11 @@ var ProjectInstanceCtrl = function ($scope, $rootScope, $modalInstance, BeamSetu
   $scope.view = 'main';
   $scope.project_types = [
     {name: 'Local', cls: 'LocalFS'},
-    {name: 'Google Drive', cls: 'GDriveFS'}
+    // {name: 'Google Drive', cls: 'GDriveFS'}
   ];
-  $scope.google_accounts = [
-    {name: 'Add An Account', value: 'add-google'}
-  ];
+  // $scope.google_accounts = [
+  //   {name: 'Add An Account', value: 'add-google'}
+  // ];
   
   for (var i=0; i < $rootScope.google_accounts.length; i++) {
     $scope.google_accounts.push({name: $rootScope.google_accounts[i].name, value: $rootScope.google_accounts[i].id});

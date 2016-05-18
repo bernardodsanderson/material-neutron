@@ -478,7 +478,7 @@ body.tomorrow_night_eighties-theme .modal-content {
 
 body.tomorrow_night_eighties-theme .ace_search {
   background-color: rgba(38, 50, 56, 0);
-  border: 1px solid #263238;
+  border: none;
   color: #ccc;
   padding: 8px;
   border-radius: 0;
