@@ -8,6 +8,14 @@
       <tr>
         <td>
           <div class="form-group">
+            <label for="prefs-theme">Theme:</label>
+            <div class="preselect">
+              <select id="prefs-theme" class="form-control" ng-model="form.theme" ng-options="theme.key as theme.name for theme in themes"></select>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
             <label for="prefs-keybind">Key Bindings:</label>
             <div class="preselect">
               <select id="prefs-keybind" class="form-control" ng-model="form.keybind" ng-options="key.key as key.name for key in key_modes"></select>
