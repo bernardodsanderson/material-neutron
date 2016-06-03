@@ -51,7 +51,7 @@ ndrive.run(function ($rootScope, $modal, $q) {
   
   $rootScope.load_editor = function () {
     Editor = ace.edit("editor");
-    Editor.setTheme("ace/theme/tomorrow_night_eighties");
+    Editor.setTheme("ace/theme/material");
     Editor.renderer.setScrollMargin(0, 10, 0, 0);
     
     $rootScope.load_commands(0);
