@@ -1,5 +1,5 @@
 var DEFAULT_PREFS = {
-  theme: 'tomorrow_night_eighties',
+  theme: 'material',
   fontsize: '12px',
   keybind: 'ace',
   soft_wrap: 'on',
@@ -38,7 +38,7 @@ var THEMES = [
   {key: "katzenmilch", name: "Katzenmilch"},
   {key: "kr_theme", name: "KR"},
   {key: "kuroir", name: "Kuroir"},
-  {key: "tomorrow_night_eighties", name: "Material Theme"},
+  {key: "material", name: "Material Theme"},
   {key: "merbivore", name: "Merbivore"},
   {key: "merbivore_soft", name: "Merbivore - Soft"},
   {key: "mono_industrial", name: "Mono Industrial"},
@@ -52,6 +52,7 @@ var THEMES = [
   {key: "tomorrow_night", name: "Tomorrow Night"},
   {key: "tomorrow_night_blue", name: "Tomorrow Night - Blue"},
   {key: "tomorrow_night_bright", name: "Tomorrow Night - Bright"},
+  {key: "tomorrow_night_eighties", name: "Tomorrow Night - Eighties"},
   {key: "twilight", name: "Twilight"},
   {key: "vibrant_ink", name: "Vibrant Ink"},
   {key: "xcode", name: "XCode"}
