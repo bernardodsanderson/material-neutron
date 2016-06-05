@@ -18,6 +18,26 @@
         </div>
       </div>
     </div>
+    <div class="btn-group" style="float:right;">
+    <!--<button type="button" id="split-button" class="btn" ng-click="split_screen()" style="margin-top: 6px; margin-right: -6px;"><i class="material-icons" style="font-size: 18px;">flip</i></button>-->
+    <button type="button" class="btn dropdown-toggle" style="padding: 5px 5px 0 5px;" data-toggle="dropdown">
+      <i class="material-icons" style="font-size: 15px;">more_vert</i>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="clickme" ng-click="send_event('keyboard-save')"> Save</a></li>
+      <li class="divider"></li>
+      <li><a class="clickme" ng-click="send_event('keyboard-close-tab')"> Close</a></li>
+      <!--<li class="divider"></li>-->
+      <!--<li><a class="clickme" ng-click="send_event('keyboard-toggle-split')"> Toggle Split</a></li>-->
+      <!--<li class="divider"></li>-->
+      <!--<li class="dropdown-submenu">-->
+      <!--  <a>Recent Files</a>-->
+      <!--  <ul class="dropdown-menu">-->
+      <!--    <li ng-repeat="file in recent_files track by $index"><a class="clickme" ng-click="open_recent($index)">{{ file.name }}</a></li>-->
+      <!--  </ul>-->
+      <!--</li>-->
+    </ul>
+  </div>
   </div>
   <div id="editor" ng-show="tabs.length > 0" right-click="editor_right_click($event)"></div>
   <div id="no-editor" ng-show="tabs.length == 0">
