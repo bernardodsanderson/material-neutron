@@ -29,7 +29,7 @@
           </li>
         </ul>
       </div>
-      <!--<div id="menuBar" ng-controller="MenuCtrl" ng-include="'menu.html'" ng-click="hide_right();"></div>-->
+      <div id="menuBar" ng-controller="MenuCtrl" ng-include="'menu.html'" ng-click="hide_right();"></div>
       <div id="appWrapper">
         <div id="leftSide" ng-include="'side-tools.html'"></div>
         <div id="leftSplitter">
@@ -42,7 +42,6 @@
         <div id="mainApp" ng-include="'main-app.html'" onload="load_editor()"></div>
         <div id="rightSide"></div>
       </div>
-      <div id="menuBar" ng-controller="MenuCtrl" ng-include="'menu.html'" ng-click="hide_right();"></div>
     </div>
     <div id="webViews" ng-controller="WebViewCtrl" ng-include="'webviews.html'"></div>
     

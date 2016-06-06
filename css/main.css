@@ -167,10 +167,6 @@ input[type=radio]:checked+label:after {
   position: relative;
 }
 
-body .dropdown-menu>li>a:hover {
-  opacity: 1 !important;
-}
-
 #menuBar #buttons .dropdown-menu .dropdown-submenu>.dropdown-menu {
   top: 0;
   right: 100%;
@@ -262,7 +258,7 @@ body.material-theme .btn {
 }
 
 #buttons .btn {
-  margin-top: -4px;
+  margin-top: 5px;
   margin-right: -5px;
 }
 
@@ -382,12 +378,10 @@ body.material-theme #tabs #tab-list {
 
 body.material-theme .open .dropdown-toggle.btn {
   background-color: #222D32;
-  box-shadow: none;
 }
 
 body .dropdown-menu {
   border-radius: 0 !important;
-  margin-left: -136px;
 }
 
 body.material-theme .dropdown-menu {
@@ -1768,15 +1762,15 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 
 #menuBar {
-  height: 20px;
+  height: 40px;
 }
 
 #menuBar .btn {
-  padding: 4px 10px;
+  padding: 4px 10px
 }
 
 #menuBar #buttons {
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 0
 }
 
 #menuBar #buttons .dropdown-menu {
@@ -1787,101 +1781,99 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 #menuBar #quick-search {
   display: inline-block;
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 0
 }
 
 #menuBar #quick-search input {
-  height: 31px;
+  height: 31px
 }
 
 #menuBar .pull-left img {
-  width: 16px;
-  margin: 4px 10px 0 10px;
+  width: 29px;
+  margin: 8px 10px 0 10px;
   display: block;
-  float: left;
+  float: left
 }
 
 #menuBar .pull-left span {
   display: block;
-  float: left;
+  float: left
 }
 
 #menuBar .pull-left span.nfont {
-  font-size: 12px;
-  margin-top: 2px;
+  font-size: 26px;
+  margin-top: 10px
 }
 
 #menuBar .pull-left span.version {
-  font-size: 7px;
-  margin: 4px 0 0 8px;
-  opacity: 0.5;
+  font-size: 9px;
+  margin: 16px 0 0 10px
 }
 
 #menuBar #messages {
-  margin: 1px 0 0 10px;
-  white-space: nowrap;
-  font-size: 10px;
+  margin: 11px 0 0 20px;
+  white-space: nowrap
 }
 
 #menuBar #messages>div {
-  float: left;
+  float: left
 }
 
 #menuBar #messages>div:after {
   padding: 0 8px;
-  content: "\22C5";
+  content: "\22C5"
 }
 
 #menuBar #messages>div:last-child:after {
   padding: 0 0;
-  content: "";
+  content: ""
 }
 
 #menuBar #messages>div:before {
   font-family: FontAwesome;
-  padding: 0 5px 0 0;
+  padding: 0 5px 0 0
 }
 
 #menuBar #messages>div.info:before {
-  content: "\f05a";
+  content: "\f05a"
 }
 
 #menuBar #messages>div.info.update:before {
-  content: "\f0aa";
+  content: "\f0aa"
 }
 
 #menuBar #messages>div.error:before {
-  content: "\f188";
+  content: "\f188"
 }
 
 #no-editor {
-  text-align: center;
+  text-align: center
 }
 
 #no-editor .nfont {
   font-size: 32px;
-  margin: 40px 0 20px 0;
+  margin: 40px 0 20px 0
 }
 
 #no-editor img {
-  width: 128px;
+  width: 128px
 }
 
 #appWrapper {
-  height: calc(100% - 20px);
-  position: relative;
+  height: calc(100% - 40px);
+  position: relative
 }
 
 .errorModal i,
 .messageModal i {
   display: block;
   text-align: center;
-  font-size: 48px;
+  font-size: 48px
 }
 
 .errorModal h3,
 .messageModal h3 {
-  text-align: center;
+  text-align: center
 }
 
 #leftSplitter {
@@ -1897,7 +1889,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 #leftSplitter>div {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 100%
 }
 
 #leftSplitter>div i {
@@ -1908,7 +1900,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   left: 0;
   cursor: pointer;
   padding: 5px 1px;
-  margin: 0 0 5px 0;
+  margin: 0 0 5px 0
 }
 
 #leftSplitter>div .mover {
@@ -1917,7 +1909,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   position: absolute;
   top: 0;
   left: 0;
-  cursor: ew-resize;
+  cursor: ew-resize
 }
 
 #leftSide {
@@ -1927,12 +1919,12 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   height: 100%;
   width: 300px;
   vertical-align: top;
-  z-index: 2;
+  z-index: 2
 }
 
 #leftSide>div {
   height: 100%;
-  width: 100%;
+  width: 100%
 }
 
 #leftSide .menu {
@@ -1954,11 +1946,11 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 #leftSide .menu .buttons {
   float: right;
-  padding: 2px 0 0 0;
+  padding: 2px 0 0 0
 }
 
 #leftSide .menu .tools {
-  padding: 0;
+  padding: 0
 }
 
 #leftSide .menu .tools ul {
@@ -1981,7 +1973,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 #leftSide .menu .tools ul li span {
   display: block;
-  padding: 4px 8px 0 8px;
+  padding: 4px 8px 0 8px
 }
 
 #leftSide .side-tool {
@@ -1992,20 +1984,20 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 }
 
 #leftSide #projects>div {
-  position: relative;
+  position: relative
 }
 
 #leftSide #projects ul {
   margin: 0 0 0 20px;
   padding: 0;
   list-style-type: none;
-  width: calc(100% - 20px);
+  width: calc(100% - 20px)
 }
 
 #leftSide #projects ul.project {
   margin: 8px 0 5px 0;
   padding: 0 0 5px 5px;
-  width: 100%;
+  width: 100%
 }
 
 #leftSide #projects ul.project:first-child {
@@ -2018,7 +2010,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   opacity: 0.7;
   width: auto;
   padding: 1px 3px 3px 3px;
-  cursor: row-resize;
+  cursor: row-resize
 }
 
 #leftSide #projects ul.project a.rm {
@@ -2026,26 +2018,26 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   float: right;
   width: auto;
   opacity: 0.7;
-  padding: 1px 7px 3px 7px;
+  padding: 1px 7px 3px 7px
 }
 
 #leftSide #projects ul.project a.rm:hover {
   opacity: 1;
-  border-radius: 60px;
+  border-radius: 60px
 }
 
 #leftSide #projects ul li {
   margin: 0 2px 0 0;
   padding: 0;
   width: 100%;
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 #leftSide #projects ul li a {
   cursor: pointer;
   text-decoration: none;
   width: 100%;
-  display: block;
+  display: block
 }
 
 #leftSide #projects ul li a.prj {
@@ -2059,42 +2051,42 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   height: 100%;
   width: calc(100% - 305px);
   vertical-align: top;
-  z-index: 20;
+  z-index: 20
 }
 
 #mainApp>div {
   height: 100%;
-  width: 100%;
+  width: 100%
 }
 
 #tabs {
   height: 29px;
   width: 100%;
-  position: relative;
+  position: relative
 }
 
 #tabs #tab-list {
   position: absolute;
   height: 100%;
   width: 27px;
-  right: 0;
+  right: 0
 }
 
 #tabs #tab-list .btn-group {
-  height: 100%;
+  height: 100%
 }
 
 #tabs #tab-list button {
   height: 100%;
   border: 0;
   box-shadow: none;
-  background-color: transparent;
+  background-color: transparent
 }
 
 #tabs #tab-list ul {
   left: auto;
   right: 2px;
-  top: 22px;
+  top: 22px
 }
 
 #tabs .tab-scroll {
@@ -2102,7 +2094,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   position: absolute;
   left: 0;
   width: calc(100% - 27px);
-  height: 29px;
+  height: 29px
 }
 
 #tabs .tab {
@@ -2116,18 +2108,18 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 #tabs .tab.selected {
   bottom: 0;
-  z-index: 100;
+  z-index: 100
 }
 
 #tabs .tab.unsaved .name:before {
   position: absolute;
   content: "*";
   font-size: 90%;
-  margin: -2px 0 0 -5px;
+  margin: -2px 0 0 -5px
 }
 
 #tabs .tab>div {
-  position: relative;
+  position: relative
 }
 
 #tabs .tab>div>div:first-child {
@@ -2140,113 +2132,113 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   top: 2px;
   left: 0;
   white-space: nowrap;
-  padding-left: 5px;
+  padding-left: 5px
 }
 
 #tabs .tab>div>div:last-child {
   font-weight: bold;
   font-size: 17px;
   position: absolute;
-  top: 2px;
-  right: 0;
+  top: -1px;
+  right: 0
 }
 
 #editor {
   height: calc(100% - 29px);
   width: 100%;
-  font-size: 16px;
+  font-size: 16px
 }
 
 #editor.ace_editor {
-  font-family: 'Roboto Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-family: 'Roboto Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace
 }
 
 .prefModal table {
   width: 100%;
   border: 0;
-  border-collapse: collapse;
+  border-collapse: collapse
 }
 
 .prefModal table tr.checks td .checkbox {
-  margin-bottom: 0;
+  margin-bottom: 0
 }
 
 .prefModal table td:first-child {
-  padding: 0 20px 0 0;
+  padding: 0 20px 0 0
 }
 
 #rightClickMenu {
   position: absolute;
   z-index: 5000;
-  border-radius: 5px;
+  border-radius: 5px
 }
 
 #rightClickMenu ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style-type: none
 }
 
 #rightClickMenu ul li {
-  padding: 5px 0;
+  padding: 5px 0
 }
 
 #rightClickMenu ul li a {
   display: block;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 10px
 }
 
 #rightClickMenu hr {
-  margin: 0;
+  margin: 0
 }
 
 .donateModal i.fa {
   display: block;
   float: right;
   padding: 0 0 10px 10px;
-  font-size: 48px;
+  font-size: 48px
 }
 
 .helpModal .modal-footer {
-  margin-top: 0;
+  margin-top: 0
 }
 
 .helpModal .modal-body {
-  padding: 20px 0 0 0;
+  padding: 20px 0 0 0
 }
 
 .helpModal .modal-body h3 {
   font-family: 'VT323', serif;
-  margin-top: 0;
+  margin-top: 0
 }
 
 .helpModal .modal-body .tab-pane {
   padding: 10px 20px;
   max-height: 400px;
-  overflow: auto;
+  overflow: auto
 }
 
 .helpModal .modal-body img {
   float: right;
   width: 128px;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 20px 20px
 }
 
 .helpModal .modal-body #help-faq ul li {
-  margin: 10px 0;
+  margin: 10px 0
 }
 
 .helpModal .modal-body #help-credits ul li {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px 0
 }
 
 .helpModal #help-os-credits li {
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .helpModal #help-credits .spin {
-  text-align: center;
+  text-align: center
 }
 
 .helpModal #help-credits .name {
@@ -2255,25 +2247,25 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   margin: 0 15px 10px 0;
   font-size: 90%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis
 }
 
 #recentFiles {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 #recentFiles ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
 #recentFiles ul li {
   margin: 10px;
   padding: 0;
   display: inline-block;
-  position: relative;
+  position: relative
 }
 
 #recentFiles ul li a {
@@ -2282,23 +2274,23 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 20px;
-  text-align: left;
+  text-align: left
 }
 
 #recentFiles ul li a i {
-  padding-right: 8px;
+  padding-right: 8px
 }
 
 #support-tools>div {
-  padding: 10px;
+  padding: 10px
 }
 
 #support-tools>div h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 0
 }
 
 #search-tools form {
-  padding: 10px;
+  padding: 10px
 }
 
 #search-tools form hr {
