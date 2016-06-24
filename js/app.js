@@ -17,6 +17,7 @@ var LAST_EXCEPTION = null;
 
 var show_update;
 
+var editor_filetype;
 
 ndrive.factory('$exceptionHandler', function ($log) {
   return function (exception, cause) {

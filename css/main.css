@@ -163,23 +163,23 @@ input[type=radio]:checked+label:after {
   right: 10px !important;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu {
+#buttons .dropdown-menu .dropdown-submenu {
   position: relative;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu>.dropdown-menu {
+#buttons .dropdown-menu .dropdown-submenu>.dropdown-menu {
   top: 0;
   right: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
+  margin-top: -3px;
+  margin-right: 0px;
   border-radius: 0 6px 6px 6px;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu:hover>.dropdown-menu {
+#buttons .dropdown-menu .dropdown-submenu:hover>.dropdown-menu {
   display: block;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu>a:after {
+#buttons .dropdown-menu .dropdown-submenu>a:after {
   display: block;
   content: " ";
   float: right;
@@ -192,11 +192,11 @@ input[type=radio]:checked+label:after {
   margin-right: -10px;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu.pull-left {
+#buttons .dropdown-menu .dropdown-submenu.pull-left {
   float: none;
 }
 
-#menuBar #buttons .dropdown-menu .dropdown-submenu.pull-left>.dropdown-menu {
+#buttons .dropdown-menu .dropdown-submenu.pull-left>.dropdown-menu {
   left: -100%;
   margin-left: 10px;
   border-radius: 6px 0 6px 6px;
@@ -258,8 +258,12 @@ body.material-theme .btn {
 }
 
 #buttons .btn {
-  margin-top: 5px;
-  margin-right: -5px;
+  /*margin-top: 5px;*/
+  margin-right: -8px;
+}
+
+#buttons .btn:last-child {
+  margin-right: 2px;
 }
 
 #buttons .btn-group {
@@ -343,8 +347,8 @@ body.material-theme #mainApp {
   background-color: #263238;
 }
 
-body.material-theme #tabs {
-  /*border-bottom: 1px solid #414141*/
+body #tabs {
+  margin-top: 5px;
 }
 
 body.material-theme #tabs .tab {
@@ -382,6 +386,13 @@ body.material-theme .open .dropdown-toggle.btn {
 
 body .dropdown-menu {
   border-radius: 0 !important;
+  margin-right: -159px;
+  margin-top: 25px;
+}
+
+body #dropdown-menu {
+  margin-right: -159px;
+  margin-top: 25px;
 }
 
 body.material-theme .dropdown-menu {
@@ -1762,7 +1773,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 
 #menuBar {
-  height: 40px;
+  height: 20px;
 }
 
 #menuBar .btn {
@@ -1789,8 +1800,8 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 }
 
 #menuBar .pull-left img {
-  width: 29px;
-  margin: 8px 10px 0 10px;
+  width: 15px;
+  margin: 4px 10px 0 10px;
   display: block;
   float: left
 }
@@ -1801,67 +1812,69 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 }
 
 #menuBar .pull-left span.nfont {
-  font-size: 26px;
-  margin-top: 10px
+  font-size: 14px;
+  margin-top: 1px
 }
 
 #menuBar .pull-left span.version {
-  font-size: 9px;
-  margin: 16px 0 0 10px
+  font-size: 8px;
+  margin: 4px 0 0 10px;
+  opacity: 0.5;
 }
 
 #menuBar #messages {
-  margin: 11px 0 0 20px;
-  white-space: nowrap
+  margin: 0 0 0 20px;
+  white-space: nowrap;
+  font-size: 12px;
 }
 
 #menuBar #messages>div {
-  float: left
+  float: left;
 }
 
 #menuBar #messages>div:after {
   padding: 0 8px;
-  content: "\22C5"
+  content: "\22C5";
 }
 
 #menuBar #messages>div:last-child:after {
   padding: 0 0;
-  content: ""
+  content: "";
 }
 
 #menuBar #messages>div:before {
   font-family: FontAwesome;
-  padding: 0 5px 0 0
+  padding: 0 5px 0 0;
 }
 
 #menuBar #messages>div.info:before {
-  content: "\f05a"
+  content: "\f05a";
 }
 
 #menuBar #messages>div.info.update:before {
-  content: "\f0aa"
+  content: "\f0aa";
 }
 
 #menuBar #messages>div.error:before {
-  content: "\f188"
+  content: "\f188";
 }
 
 #no-editor {
-  text-align: center
+  text-align: center;
 }
 
 #no-editor .nfont {
-  font-size: 32px;
-  margin: 40px 0 20px 0
+  font-size: 14px;
+  margin: 5px 0 20px 0;
 }
 
 #no-editor img {
-  width: 128px
+  width: 128px;
 }
 
 #appWrapper {
-  height: calc(100% - 40px);
-  position: relative
+  height: calc(100% - 20px);
+  position: relative;
 }
 
 .errorModal i,
@@ -2068,7 +2081,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 #tabs #tab-list {
   position: absolute;
   height: 100%;
-  width: 27px;
+  width: 50px;
   right: 0
 }
 
@@ -2085,15 +2098,15 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 
 #tabs #tab-list ul {
   left: auto;
-  right: 2px;
-  top: 22px
+  right: 157px;
+  top: 8px
 }
 
 #tabs .tab-scroll {
   overflow: hidden;
   position: absolute;
   left: 0;
-  width: calc(100% - 27px);
+  width: calc(100% - 50px);
   height: 29px
 }
 

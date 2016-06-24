@@ -10,6 +10,7 @@ function Tab (file, project, text, session, scope) {
   this.saved_md5sum = this.md5sum;
   this.scope = scope;
   this.saving = false;
+  this.filetype = session.$modeId;
   
   return this;
 }
@@ -43,13 +44,104 @@ Tab.prototype.update_hash = function () {
   this.md5sum = md5(this.session.getValue());
 };
 
-ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, AuthService) {
+ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, AuthService, $modal) {
   $scope.tabs = [];
   $scope.current_tab = null;
   $scope.set_hasher = true;
   $scope.recent_files = [];
   $scope.suggestions = [];
   $scope.suggestions_menu = [];
+  
+  // Preference popup
+  var PrefCtrl = function ($scope, $rootScope, $modalInstance) {
+    $scope.themes = THEMES;
+    $scope.key_modes = KEY_MODES;
+    $scope.font_modes = FONT_MODES;
+    $scope.wrap_modes = WRAP_MODES;
+    $scope.form = {};
+    
+    $scope.cancel = function () {
+      $modalInstance.dismiss('cancel');
+    };
+    
+    for (var key in PREFS) {
+      $scope.form[key] = PREFS[key];
+    }
+    
+    $scope.default = function () {
+      for (var key in PREFS) {
+        $scope.form[key] = DEFAULT_PREFS[key];
+      }
+    };
+    
+    $scope.save_prefs = function () {
+      $rootScope.$emit('setPrefs', $scope.form);
+      $modalInstance.dismiss('saved');
+      return false;
+    };
+  };
+  
+  $scope.pref_modal = function () {
+    $scope.pmodal = $modal.open({
+      templateUrl: 'modals/prefs.html',
+      controller: PrefCtrl,
+      windowClass: 'prefModal',
+      keyboard: true,
+      resolve: {}
+    });
+    
+    $scope.pmodal.opened.then(
+      function () {
+        setTimeout(function () { $("#prefs-theme").focus(); }, 100);
+      }
+    );
+  }; // Preference popup
+  
+  // Recent files
+  $scope.add_recent = function (event, file) {
+    for (var i=0; i < $scope.recent_files.length; i++) {
+      var r = $scope.recent_files[i];
+      if (r.retainer == file.retainer && r.ptype == file.ptype && r.pid == file.pid) {
+        $scope.recent_files.splice(i, 1);
+        break;
+      }
+    }
+    
+    $scope.recent_files.push(file);
+    if ($scope.recent_files.length > 12) {
+      $scope.recent_files.splice(0, 1);
+    }
+    
+    $rootScope.$emit('recentFiles', $scope.recent_files);
+    
+    chrome.storage.local.set({'recent_files': JSON.stringify($scope.recent_files)}, function() {
+      console.log('Recent files saved');
+    });
+  };
+  
+  $scope.restore_recent = function () {
+    chrome.storage.local.get('recent_files', function (obj) {
+      if (obj && obj.recent_files) {
+        $scope.recent_files = JSON.parse(obj.recent_files);
+        $scope.$apply();
+        
+        $rootScope.$emit('recentFiles', $scope.recent_files);
+      }
+    });
+  };
+  
+  $scope.open_recent = function (index) {
+    for (var i=0; i < $scope.recent_files.length; i++) {
+      var r = $scope.recent_files[i];
+      if (i == index) {
+        $rootScope.$emit('loadTabs', [r]);
+        break;
+      }
+    }
+  };
+  
+  $rootScope.$on('addRecent', $scope.add_recent);
+  $rootScope.$on('restoreRecent', $scope.restore_recent); // Recent files
   
   $scope.bugMe = function () {
     narf();
@@ -397,6 +489,8 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     Editor.setSession($scope.tabs[index].session);
     Editor.focus();
     
+    // sharedProperties.setProperty($scope.tabs[$scope.current_tab].session.$modeId);
+    
     if (!noscroll) {
       $scope.scroll_to(index);
     }
@@ -514,6 +608,9 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     
     callback(backwards, tabs);
   };
+  
+  //editor_filetype = $scope.tabs[$scope.current_tab].session.$modeId;
+  // console.log(editor_filetype);
   
   $rootScope.$emit('restoreRecent');
   
