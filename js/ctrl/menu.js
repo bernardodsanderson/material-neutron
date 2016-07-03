@@ -25,7 +25,6 @@
 //     return false;
 //   };
 // };
-
 var ConfirmCtrl = function ($scope, $rootScope, $modalInstance, message, f) {
   $scope.f = f;
   $scope.message = message;
@@ -46,8 +45,6 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
   $scope.recent_files = [];
   $scope.form = {qsearch: ''};
   $scope.update = null;
-  
-  console.log($scope, "scope");
   
   // $scope.show_update = function ($event, details) {
   //   $scope.update = details;

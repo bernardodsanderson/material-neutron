@@ -502,6 +502,7 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
   };
   
   $scope.save_current = function (event) {
+    console.log('saving');
     $scope.tabs[$scope.current_tab].save(true);
   };
   
@@ -584,16 +585,6 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     apply_updates($scope);
   };
   
-  $scope.open_recent = function (index) {
-    for (var i=0; i < $scope.recent_files.length; i++) {
-      var r = $scope.recent_files[i];
-      if (i == index) {
-        $rootScope.$emit('loadTabs', [r]);
-        break;
-      }
-    }
-  };
-  
   $scope.get_sessions = function (event, context, backwards, callback) {
     var tabs = $scope.tabs;
     if (context == 'current') {
@@ -609,7 +600,7 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     callback(backwards, tabs);
   };
   
-  //editor_filetype = $scope.tabs[$scope.current_tab].session.$modeId;
+  // editor_filetype = $scope.tabs[$scope.current_tab].session.$modeId;
   // console.log(editor_filetype);
   
   $rootScope.$emit('restoreRecent');
@@ -631,8 +622,8 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
   
   $rootScope.$on('keyboard-error-sim', $scope.error_simulation);
   $rootScope.$on('keyboard-save', $scope.save_current);
-  $rootScope.$on('keyboard-save-all', $scope.save_all);
+  // $rootScope.$on('keyboard-save-all', $scope.save_all);
   // $rootScope.$on('keyboard-spellcheck', $scope.toggle_spellcheck);
   $rootScope.$on('keyboard-close-tab', $scope.close_tab);
-  $rootScope.$on('keyboard-close-tabs-all', $scope.close_tab_all);
+  // $rootScope.$on('keyboard-close-tabs-all', $scope.close_tab_all);
 });
