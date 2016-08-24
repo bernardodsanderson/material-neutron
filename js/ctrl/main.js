@@ -286,11 +286,11 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     // Editor.setOption('enableBasicAutocompletion', true);
     
     if (PREFS.autocomplete) {
-      // Editor.setOption('enableLiveAutocompletion', true);
+      Editor.setOption('enableLiveAutocompletion', true);
     }
     
     else {
-      // Editor.setOption('enableLiveAutocompletion', false);
+      Editor.setOption('enableLiveAutocompletion', false);
     }
     
     $('body').attr("class", PREFS.theme + "-theme");
