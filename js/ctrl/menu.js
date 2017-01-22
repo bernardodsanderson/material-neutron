@@ -235,9 +235,7 @@ ndrive.controller('SplitterCtrl', function($scope, $rootScope) {
       $("#leftSplitter").css('left', '0');
       $("#leftSide").css('left', '10px');
       $('#leftSplitter div.mdl-layout__drawer-button').css('left', '-17px');
-    }
-    
-    else {
+    } else {
       $scope.cls = 'fa-caret-left';
       var w1 = $("#leftSide").outerWidth();
       var w2 = $("#leftSplitter").outerWidth();

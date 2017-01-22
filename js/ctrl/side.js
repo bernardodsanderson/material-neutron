@@ -157,6 +157,37 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
     $rootScope.$emit('hideRightMenu');
   };
   
+  $scope.cls = 'fa-caret-left';
+  
+  $scope.collapse = function () {
+    var w = 0;
+    
+    console.log($scope);
+    
+    if ($scope.cls == 'fa-caret-left') {
+      $scope.cls = 'fa-caret-right';
+      w = 42;
+      
+      $("#mainApp").css('width', 'calc(100% - ' + w + 'px)');
+      $("#mainApp").css('left', w + 'px');
+      // $("#leftSplitter").css('left', '0');
+      // $("#leftSide").css('left', '10px');
+      $('#leftSplitter div.mdl-layout__drawer-button').css('left', '-17px');
+      $("#collapse").toggleClass('active');
+    } else {
+      $scope.cls = 'fa-caret-left';
+      var w1 = $("#leftSide").outerWidth();
+      var w2 = $("#leftSplitter").outerWidth();
+      w = w1 + w2;
+      
+      $("#mainApp").css('width', 'calc(100% - ' + w + 'px)');
+      $("#mainApp").css('left', w + 'px');
+      $("#leftSplitter").css('left', w1 + 'px');
+      $("#leftSide").css('left', '0');
+      $("#collapse").toggleClass('active');
+    }
+  };
+  
   $scope.project_modal = function () {
     var pmodal = $modal.open({
       templateUrl: 'modals/project.html',
