@@ -1,4 +1,3 @@
-
 function launch_main_window (launchData) {
   var win = chrome.app.window.get("ndrive-main");
   if (win) {
@@ -22,7 +21,7 @@ function launch_main_window (launchData) {
     chrome.app.window.create('html/main.html', {
       resizable: true,
       id: "ndrive-main",
-      // frame: { color: "#263238" },
+      frame: "none",
       bounds: {
         width: width,
         height: height

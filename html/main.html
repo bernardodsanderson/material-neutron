@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="/lib/material/material.min.css">
   </head>
   <body class="material-theme">
+    <div class="titlebar">
+      <div class="buttons">
+        <button class="window" id="title-minimize"><i class="material-icons" style="position: relative;top: 5px;">remove</i></button>
+        <button class="window" id="title-maximize"><i class="material-icons">crop_square</i></button>
+        <!--<button id="title-fullscreen"><i class="material-icons">fullscreen</i></button>-->
+        <button id="title-close"><i class="material-icons">close</i></button>
+      </div>
+    </div>
     <div id="mainWrapper">
       <div id="rightClickMenu" ng-controller="RightClickCtrl" style="display: {{ display }}; {{ position }};">
         <ul>
@@ -75,6 +83,7 @@
     <script src="/js/prefs.js"></script>
     <script src="/js/keyboard.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/title-bar.js"></script>
     <script src="/js/ctrl/right-click.js"></script>
     <script src="/js/ctrl/main.js"></script>
     <script src="/js/ctrl/menu.js"></script>

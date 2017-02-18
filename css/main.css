@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #333;
 }
 
 body .mdl-button {
@@ -228,7 +229,7 @@ input[type=radio]:checked+label:after {
   margin-bottom: -1px;
 }
 
-body.material-theme {
+body.material-theme, .titlebar {
   color: #ccc;
   background-color: #263238;
 }
@@ -656,7 +657,7 @@ body .ace_search_form, body .ace_replace_form {
 }
 
 /* TEXTMATE THEME*/
-body.textmate-theme #tabs, body.textmate-theme #appWrapper, body.textmate-theme #menuBar .btn, body.textmate-theme .ace_search.right, body.textmate-theme .modal-content, body.textmate-theme .btn, body.textmate-theme #menuBar, body.textmate-theme #menuBar #buttons .dropdown-menu, body.textmate-theme .dropdown-menu li a, body.textmate-theme .ace_search_options span {
+body.textmate-theme #tabs, body.textmate-theme #appWrapper, body.textmate-theme #menuBar .btn, body.textmate-theme .ace_search.right, body.textmate-theme .modal-content, body.textmate-theme .btn, body.textmate-theme #menuBar, body.textmate-theme #menuBar #buttons .dropdown-menu, body.textmate-theme .dropdown-menu li a, body.textmate-theme .ace_search_options span, body.textmate-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -690,7 +691,7 @@ body.textmate-theme #leftSide .menu .tools ul li.active {
 }
 
 /* TERMINAL THEME*/
-body.terminal-theme #tabs, body.terminal-theme #appWrapper, body.terminal-theme #menuBar .btn, body.terminal-theme .ace_search.right, body.terminal-theme .modal-content, body.terminal-theme .btn, body.terminal-theme #menuBar, body.terminal-theme #menuBar #buttons .dropdown-menu, body.terminal-theme .dropdown-menu li a, body.terminal-theme .ace_search_options span {
+body.terminal-theme #tabs, body.terminal-theme #appWrapper, body.terminal-theme #menuBar .btn, body.terminal-theme .ace_search.right, body.terminal-theme .modal-content, body.terminal-theme .btn, body.terminal-theme #menuBar, body.terminal-theme #menuBar #buttons .dropdown-menu, body.terminal-theme .dropdown-menu li a, body.terminal-theme .ace_search_options span, body.terminal-theme .titlebar {
   background-color: #000; 
   color: #ccc;
 }
@@ -724,7 +725,7 @@ body.terminal-theme #leftSide .menu .tools ul li.active {
 }
 
 /* AMBIANCE THEME*/
-body.ambiance-theme #tabs, body.ambiance-theme #appWrapper, body.ambiance-theme #menuBar .btn, body.ambiance-theme .ace_search.right, body.ambiance-theme .modal-content, body.ambiance-theme .btn, body.ambiance-theme #menuBar, body.ambiance-theme #menuBar #buttons .dropdown-menu, body.ambiance-theme .dropdown-menu li a, body.ambiance-theme .ace_search_options span {
+body.ambiance-theme #tabs, body.ambiance-theme #appWrapper, body.ambiance-theme #menuBar .btn, body.ambiance-theme .ace_search.right, body.ambiance-theme .modal-content, body.ambiance-theme .btn, body.ambiance-theme #menuBar, body.ambiance-theme #menuBar #buttons .dropdown-menu, body.ambiance-theme .dropdown-menu li a, body.ambiance-theme .ace_search_options span, body.ambiance-theme .titlebar {
   background-color: #262626;
   color: #ccc;
 }
@@ -758,7 +759,7 @@ body.ambiance-theme #leftSide .menu .tools ul li.active {
 }
 
 /* CHAOS THEME*/
-body.chaos-theme #tabs, body.chaos-theme #appWrapper, body.chaos-theme #menuBar .btn, body.chaos-theme .ace_search.right, body.chaos-theme .modal-content, body.chaos-theme .btn, body.chaos-theme #menuBar, body.chaos-theme #menuBar #buttons .dropdown-menu, body.chaos-theme .dropdown-menu li a, body.chaos-theme .ace_search_options span {
+body.chaos-theme #tabs, body.chaos-theme #appWrapper, body.chaos-theme #menuBar .btn, body.chaos-theme .ace_search.right, body.chaos-theme .modal-content, body.chaos-theme .btn, body.chaos-theme #menuBar, body.chaos-theme #menuBar #buttons .dropdown-menu, body.chaos-theme .dropdown-menu li a, body.chaos-theme .ace_search_options span, body.chaos-theme .titlebar {
   background-color: #161616; 
   color: #ccc;
 }
@@ -792,7 +793,7 @@ body.chaos-theme #leftSide .menu .tools ul li.active {
 }
 
 /* CHROME THEME*/
-body.chrome-theme #tabs, body.chrome-theme #appWrapper, body.chrome-theme #menuBar .btn, body.chrome-theme .ace_search.right, body.chrome-theme .modal-content, body.chrome-theme .btn, body.chrome-theme #menuBar, body.chrome-theme #menuBar #buttons .dropdown-menu, body.chrome-theme .dropdown-menu li a, body.chrome-theme .ace_search_options span {
+body.chrome-theme #tabs, body.chrome-theme #appWrapper, body.chrome-theme #menuBar .btn, body.chrome-theme .ace_search.right, body.chrome-theme .modal-content, body.chrome-theme .btn, body.chrome-theme #menuBar, body.chrome-theme #menuBar #buttons .dropdown-menu, body.chrome-theme .dropdown-menu li a, body.chrome-theme .ace_search_options span, body.chrome-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -827,7 +828,7 @@ body.chrome-theme #leftSide .menu .tools ul li.active {
 
 
 /* CLOUDS THEME*/
-body.clouds-theme #tabs, body.clouds-theme #appWrapper, body.clouds-theme #menuBar .btn, body.clouds-theme .ace_search.right, body.clouds-theme .modal-content, body.clouds-theme .btn, body.clouds-theme #menuBar, body.clouds-theme #menuBar #buttons .dropdown-menu, body.clouds-theme .dropdown-menu li a, body.clouds-theme .ace_search_options span {
+body.clouds-theme #tabs, body.clouds-theme #appWrapper, body.clouds-theme #menuBar .btn, body.clouds-theme .ace_search.right, body.clouds-theme .modal-content, body.clouds-theme .btn, body.clouds-theme #menuBar, body.clouds-theme #menuBar #buttons .dropdown-menu, body.clouds-theme .dropdown-menu li a, body.clouds-theme .ace_search_options span, body.clouds-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -862,7 +863,7 @@ body.clouds-theme #leftSide .menu .tools ul li.active {
 
 
 /* CLOUDS-MIDNIGHT THEME*/
-body.clouds_midnight-theme #tabs, body.clouds_midnight-theme #appWrapper, body.clouds_midnight-theme #menuBar .btn, body.clouds_midnight-theme .ace_search.right, body.clouds_midnight-theme .modal-content, body.clouds_midnight-theme .btn, body.clouds_midnight-theme #menuBar, body.clouds_midnight-theme #menuBar #buttons .dropdown-menu, body.clouds_midnight-theme .dropdown-menu li a, body.clouds_midnight-theme .ace_search_options span {
+body.clouds_midnight-theme #tabs, body.clouds_midnight-theme #appWrapper, body.clouds_midnight-theme #menuBar .btn, body.clouds_midnight-theme .ace_search.right, body.clouds_midnight-theme .modal-content, body.clouds_midnight-theme .btn, body.clouds_midnight-theme #menuBar, body.clouds_midnight-theme #menuBar #buttons .dropdown-menu, body.clouds_midnight-theme .dropdown-menu li a, body.clouds_midnight-theme .ace_search_options span, body.clouds_midnight-theme .titlebar {
   background-color: #191919; 
   color: #ccc;
 }
@@ -897,7 +898,7 @@ body.clouds_midnight-theme #leftSide .menu .tools ul li.active {
 
 
 /* COBALT THEME*/
-body.cobalt-theme #tabs, body.cobalt-theme #appWrapper, body.cobalt-theme #menuBar .btn, body.cobalt-theme .ace_search.right, body.cobalt-theme .modal-content, body.cobalt-theme .btn, body.cobalt-theme #menuBar, body.cobalt-theme #menuBar #buttons .dropdown-menu, body.cobalt-theme .dropdown-menu li a, body.cobalt-theme .ace_search_options span {
+body.cobalt-theme #tabs, body.cobalt-theme #appWrapper, body.cobalt-theme #menuBar .btn, body.cobalt-theme .ace_search.right, body.cobalt-theme .modal-content, body.cobalt-theme .btn, body.cobalt-theme #menuBar, body.cobalt-theme #menuBar #buttons .dropdown-menu, body.cobalt-theme .dropdown-menu li a, body.cobalt-theme .ace_search_options span, body, body.cobalt-theme .titlebar {
   background-color: #002240; 
   color: #ccc;
 }
@@ -932,7 +933,7 @@ body.cobalt-theme #leftSide .menu .tools ul li.active {
 
 
 /* CRIMSON-EDITOR THEME*/
-body.crimson_editor-theme #tabs, body.crimson_editor-theme #appWrapper, body.crimson_editor-theme #menuBar .btn, body.crimson_editor-theme .ace_search.right, body.crimson_editor-theme .modal-content, body.crimson_editor-theme .btn, body.crimson_editor-theme #menuBar, body.crimson_editor-theme #menuBar #buttons .dropdown-menu, body.crimson_editor-theme .dropdown-menu li a, body.crimson_editor-theme .ace_search_options span {
+body.crimson_editor-theme #tabs, body.crimson_editor-theme #appWrapper, body.crimson_editor-theme #menuBar .btn, body.crimson_editor-theme .ace_search.right, body.crimson_editor-theme .modal-content, body.crimson_editor-theme .btn, body.crimson_editor-theme #menuBar, body.crimson_editor-theme #menuBar #buttons .dropdown-menu, body.crimson_editor-theme .dropdown-menu li a, body.crimson_editor-theme .ace_search_options span, body.crimson_editor-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -967,7 +968,7 @@ body.crimson_editor-theme #leftSide .menu .tools ul li.active {
 
 
 /* DAWN THEME*/
-body.dawn-theme #tabs, body.dawn-theme #appWrapper, body.dawn-theme #menuBar .btn, body.dawn-theme .ace_search.right, body.dawn-theme .modal-content, body.dawn-theme .btn, body.dawn-theme #menuBar, body.dawn-theme #menuBar #buttons .dropdown-menu, body.dawn-theme .dropdown-menu li a, body.dawn-theme .ace_search_options span {
+body.dawn-theme #tabs, body.dawn-theme #appWrapper, body.dawn-theme #menuBar .btn, body.dawn-theme .ace_search.right, body.dawn-theme .modal-content, body.dawn-theme .btn, body.dawn-theme #menuBar, body.dawn-theme #menuBar #buttons .dropdown-menu, body.dawn-theme .dropdown-menu li a, body.dawn-theme .ace_search_options span, body.dawn-theme .titlebar {
   background-color: #F9F9F9; 
   color: #333;
 }
@@ -1002,7 +1003,7 @@ body.dawn-theme #leftSide .menu .tools ul li.active {
 
 
 /* DREAMWEAVER THEME*/
-body.dreamweaver-theme #tabs, body.dreamweaver-theme #appWrapper, body.dreamweaver-theme #menuBar .btn, body.dreamweaver-theme .ace_search.right, body.dreamweaver-theme .modal-content, body.dreamweaver-theme .btn, body.dreamweaver-theme #menuBar, body.dreamweaver-theme #menuBar #buttons .dropdown-menu, body.dreamweaver-theme .dropdown-menu li a, body.dreamweaver-theme .ace_search_options span {
+body.dreamweaver-theme #tabs, body.dreamweaver-theme #appWrapper, body.dreamweaver-theme #menuBar .btn, body.dreamweaver-theme .ace_search.right, body.dreamweaver-theme .modal-content, body.dreamweaver-theme .btn, body.dreamweaver-theme #menuBar, body.dreamweaver-theme #menuBar #buttons .dropdown-menu, body.dreamweaver-theme .dropdown-menu li a, body.dreamweaver-theme .ace_search_options span, body.dreamweaver-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -1037,7 +1038,7 @@ body.dreamweaver-theme #leftSide .menu .tools ul li.active {
 
 
 /* ECLIPSE THEME*/
-body.eclipse-theme #tabs, body.eclipse-theme #appWrapper, body.eclipse-theme #menuBar .btn, body.eclipse-theme .ace_search.right, body.eclipse-theme .modal-content, body.eclipse-theme .btn, body.eclipse-theme #menuBar, body.eclipse-theme #menuBar #buttons .dropdown-menu, body.eclipse-theme .dropdown-menu li a, body.eclipse-theme .ace_search_options span {
+body.eclipse-theme #tabs, body.eclipse-theme #appWrapper, body.eclipse-theme #menuBar .btn, body.eclipse-theme .ace_search.right, body.eclipse-theme .modal-content, body.eclipse-theme .btn, body.eclipse-theme #menuBar, body.eclipse-theme #menuBar #buttons .dropdown-menu, body.eclipse-theme .dropdown-menu li a, body.eclipse-theme .ace_search_options span, body.eclipse-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -1072,7 +1073,7 @@ body.eclipse-theme #leftSide .menu .tools ul li.active {
 
 
 /* GITHUB THEME*/
-body.github-theme #tabs, body.github-theme #appWrapper, body.github-theme #menuBar .btn, body.github-theme .ace_search.right, body.github-theme .modal-content, body.github-theme .btn, body.github-theme #menuBar, body.github-theme #menuBar #buttons .dropdown-menu, body.github-theme .dropdown-menu li a, body.github-theme .ace_search_options span {
+body.github-theme #tabs, body.github-theme #appWrapper, body.github-theme #menuBar .btn, body.github-theme .ace_search.right, body.github-theme .modal-content, body.github-theme .btn, body.github-theme #menuBar, body.github-theme #menuBar #buttons .dropdown-menu, body.github-theme .dropdown-menu li a, body.github-theme .ace_search_options span, body.github-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -1106,7 +1107,7 @@ body.github-theme #leftSide .menu .tools ul li.active {
 }
 
 /* IDLE-FINGERS THEME*/
-body.idle_fingers-theme #tabs, body.idle_fingers-theme #appWrapper, body.idle_fingers-theme #menuBar .btn, body.idle_fingers-theme .ace_search.right, body.idle_fingers-theme .modal-content, body.idle_fingers-theme .btn, body.idle_fingers-theme #menuBar, body.idle_fingers-theme #menuBar #buttons .dropdown-menu, body.idle_fingers-theme .dropdown-menu li a, body.idle_fingers-theme .ace_search_options span {
+body.idle_fingers-theme #tabs, body.idle_fingers-theme #appWrapper, body.idle_fingers-theme #menuBar .btn, body.idle_fingers-theme .ace_search.right, body.idle_fingers-theme .modal-content, body.idle_fingers-theme .btn, body.idle_fingers-theme #menuBar, body.idle_fingers-theme #menuBar #buttons .dropdown-menu, body.idle_fingers-theme .dropdown-menu li a, body.idle_fingers-theme .ace_search_options span, body.idle_fingers-theme .titlebar {
   background-color: #323232; 
   color: #ccc;
 }
@@ -1141,7 +1142,7 @@ body.idle_fingers-theme #leftSide .menu .tools ul li.active {
 
 
 /* KATZENMILCH THEME*/
-body.katzenmilch-theme #tabs, body.katzenmilch-theme #appWrapper, body.katzenmilch-theme #menuBar .btn, body.katzenmilch-theme .ace_search.right, body.katzenmilch-theme .modal-content, body.katzenmilch-theme .btn, body.katzenmilch-theme #menuBar, body.katzenmilch-theme #menuBar #buttons .dropdown-menu, body.katzenmilch-theme .dropdown-menu li a, body.katzenmilch-theme .ace_search_options span {
+body.katzenmilch-theme #tabs, body.katzenmilch-theme #appWrapper, body.katzenmilch-theme #menuBar .btn, body.katzenmilch-theme .ace_search.right, body.katzenmilch-theme .modal-content, body.katzenmilch-theme .btn, body.katzenmilch-theme #menuBar, body.katzenmilch-theme #menuBar #buttons .dropdown-menu, body.katzenmilch-theme .dropdown-menu li a, body.katzenmilch-theme .ace_search_options span, body.katzenmilch-theme .titlebar {
   background-color: #F3F2F3; 
   color: #333;
 }
@@ -1176,7 +1177,7 @@ body.katzenmilch-theme #leftSide .menu .tools ul li.active {
 
 
 /* KR THEME*/
-body.kr_theme-theme #tabs, body.kr_theme-theme #appWrapper, body.kr_theme-theme #menuBar .btn, body.kr_theme-theme .ace_search.right, body.kr_theme-theme .modal-content, body.kr_theme-theme .btn, body.kr_theme-theme #menuBar, body.kr_theme-theme #menuBar #buttons .dropdown-menu, body.kr_theme-theme .dropdown-menu li a, body.kr_theme-theme .ace_search_options span {
+body.kr_theme-theme #tabs, body.kr_theme-theme #appWrapper, body.kr_theme-theme #menuBar .btn, body.kr_theme-theme .ace_search.right, body.kr_theme-theme .modal-content, body.kr_theme-theme .btn, body.kr_theme-theme #menuBar, body.kr_theme-theme #menuBar #buttons .dropdown-menu, body.kr_theme-theme .dropdown-menu li a, body.kr_theme-theme .ace_search_options span, body.kr_theme-theme .titlebar {
   background-color: #0B0A09; 
   color: #ccc;
 }
@@ -1211,7 +1212,7 @@ body.kr_theme-theme #leftSide .menu .tools ul li.active {
 
 
 /* KUROIR THEME*/
-body.kuroir-theme #tabs, body.kuroir-theme #appWrapper, body.kuroir-theme #menuBar .btn, body.kuroir-theme .ace_search.right, body.kuroir-theme .modal-content, body.kuroir-theme .btn, body.kuroir-theme #menuBar, body.kuroir-theme #menuBar #buttons .dropdown-menu, body.kuroir-theme .dropdown-menu li a, body.kuroir-theme .ace_search_options span {
+body.kuroir-theme #tabs, body.kuroir-theme #appWrapper, body.kuroir-theme #menuBar .btn, body.kuroir-theme .ace_search.right, body.kuroir-theme .modal-content, body.kuroir-theme .btn, body.kuroir-theme #menuBar, body.kuroir-theme #menuBar #buttons .dropdown-menu, body.kuroir-theme .dropdown-menu li a, body.kuroir-theme .ace_search_options span, body.kuroir-theme .titlebar {
   background-color: #E8E9E8; 
   color: #333;
 }
@@ -1246,7 +1247,7 @@ body.kuroir-theme #leftSide .menu .tools ul li.active {
 
 
 /* MERBIVORE THEME*/
-body.merbivore-theme #tabs, body.merbivore-theme #appWrapper, body.merbivore-theme #menuBar .btn, body.merbivore-theme .ace_search.right, body.merbivore-theme .modal-content, body.merbivore-theme .btn, body.merbivore-theme #menuBar, body.merbivore-theme #menuBar #buttons .dropdown-menu, body.merbivore-theme .dropdown-menu li a, body.merbivore-theme .ace_search_options span {
+body.merbivore-theme #tabs, body.merbivore-theme #appWrapper, body.merbivore-theme #menuBar .btn, body.merbivore-theme .ace_search.right, body.merbivore-theme .modal-content, body.merbivore-theme .btn, body.merbivore-theme #menuBar, body.merbivore-theme #menuBar #buttons .dropdown-menu, body.merbivore-theme .dropdown-menu li a, body.merbivore-theme .ace_search_options span, body.merbivore-theme .titlebar {
   background-color: #161616; 
   color: #ccc;
 }
@@ -1281,7 +1282,7 @@ body.merbivore-theme #leftSide .menu .tools ul li.active {
 
 
 /* MERBIVORE-SOFT THEME*/
-body.merbivore_soft-theme #tabs, body.merbivore_soft-theme #appWrapper, body.merbivore_soft-theme #menuBar .btn, body.merbivore_soft-theme .ace_search.right, body.merbivore_soft-theme .modal-content, body.merbivore_soft-theme .btn, body.merbivore_soft-theme #menuBar, body.merbivore_soft-theme #menuBar #buttons .dropdown-menu, body.merbivore_soft-theme .dropdown-menu li a, body.merbivore_soft-theme .ace_search_options span {
+body.merbivore_soft-theme #tabs, body.merbivore_soft-theme #appWrapper, body.merbivore_soft-theme #menuBar .btn, body.merbivore_soft-theme .ace_search.right, body.merbivore_soft-theme .modal-content, body.merbivore_soft-theme .btn, body.merbivore_soft-theme #menuBar, body.merbivore_soft-theme #menuBar #buttons .dropdown-menu, body.merbivore_soft-theme .dropdown-menu li a, body.merbivore_soft-theme .ace_search_options span, body.merbivore_soft-theme .titlebar {
   background-color: #1C1C1C; 
   color: #ccc;
 }
@@ -1316,7 +1317,7 @@ body.merbivore_soft-theme #leftSide .menu .tools ul li.active {
 
 
 /* MONO-INDUSTRIAL THEME*/
-body.mono_industrial-theme #tabs, body.mono_industrial-theme #appWrapper, body.mono_industrial-theme #menuBar .btn, body.mono_industrial-theme .ace_search.right, body.mono_industrial-theme .modal-content, body.mono_industrial-theme .btn, body.mono_industrial-theme #menuBar, body.mono_industrial-theme #menuBar #buttons .dropdown-menu, body.mono_industrial-theme .dropdown-menu li a, body.mono_industrial-theme .ace_search_options span {
+body.mono_industrial-theme #tabs, body.mono_industrial-theme #appWrapper, body.mono_industrial-theme #menuBar .btn, body.mono_industrial-theme .ace_search.right, body.mono_industrial-theme .modal-content, body.mono_industrial-theme .btn, body.mono_industrial-theme #menuBar, body.mono_industrial-theme #menuBar #buttons .dropdown-menu, body.mono_industrial-theme .dropdown-menu li a, body.mono_industrial-theme .ace_search_options span, body.mono_industrial-theme .titlebar {
   background-color: #222C28; 
   color: #ccc;
 }
@@ -1350,7 +1351,7 @@ body.mono_industrial-theme #leftSide .menu .tools ul li.active {
 }
 
 /* MONOKAI THEME*/
-body.monokai-theme #tabs, body.monokai-theme #appWrapper, body.monokai-theme #menuBar .btn, body.monokai-theme .ace_search.right, body.monokai-theme .modal-content, body.monokai-theme .btn, body.monokai-theme #menuBar, body.monokai-theme #menuBar #buttons .dropdown-menu, body.monokai-theme .dropdown-menu li a, body.monokai-theme .ace_search_options span {
+body.monokai-theme #tabs, body.monokai-theme #appWrapper, body.monokai-theme #menuBar .btn, body.monokai-theme .ace_search.right, body.monokai-theme .modal-content, body.monokai-theme .btn, body.monokai-theme #menuBar, body.monokai-theme #menuBar #buttons .dropdown-menu, body.monokai-theme .dropdown-menu li a, body.monokai-theme .ace_search_options span, body.monokai-theme .titlebar {
   background-color: #272822; 
   color: #ccc;
 }
@@ -1385,7 +1386,7 @@ body.monokai-theme #leftSide .menu .tools ul li.active {
 
 
 /* PASTEL-ON-DARK THEME*/
-body.pastel_on_dark-theme #tabs, body.pastel_on_dark-theme #appWrapper, body.pastel_on_dark-theme #menuBar .btn, body.pastel_on_dark-theme .ace_search.right, body.pastel_on_dark-theme .modal-content, body.pastel_on_dark-theme .btn, body.pastel_on_dark-theme #menuBar, body.pastel_on_dark-theme #menuBar #buttons .dropdown-menu, body.pastel_on_dark-theme .dropdown-menu li a, body.pastel_on_dark-theme .ace_search_options span {
+body.pastel_on_dark-theme #tabs, body.pastel_on_dark-theme #appWrapper, body.pastel_on_dark-theme #menuBar .btn, body.pastel_on_dark-theme .ace_search.right, body.pastel_on_dark-theme .modal-content, body.pastel_on_dark-theme .btn, body.pastel_on_dark-theme #menuBar, body.pastel_on_dark-theme #menuBar #buttons .dropdown-menu, body.pastel_on_dark-theme .dropdown-menu li a, body.pastel_on_dark-theme .ace_search_options span, body.pastel_on_dark-theme .titlebar {
   background-color: #2C2828; 
   color: #ccc;
 }
@@ -1420,7 +1421,7 @@ body.pastel_on_dark-theme #leftSide .menu .tools ul li.active {
 
 
 /* SOLARIZED-DARK THEME*/
-body.solarized_dark-theme #tabs, body.solarized_dark-theme #appWrapper, body.solarized_dark-theme #menuBar .btn, body.solarized_dark-theme .ace_search.right, body.solarized_dark-theme .modal-content, body.solarized_dark-theme .btn, body.solarized_dark-theme #menuBar, body.solarized_dark-theme #menuBar #buttons .dropdown-menu, body.solarized_dark-theme .dropdown-menu li a, body.solarized_dark-theme .ace_search_options span {
+body.solarized_dark-theme #tabs, body.solarized_dark-theme #appWrapper, body.solarized_dark-theme #menuBar .btn, body.solarized_dark-theme .ace_search.right, body.solarized_dark-theme .modal-content, body.solarized_dark-theme .btn, body.solarized_dark-theme #menuBar, body.solarized_dark-theme #menuBar #buttons .dropdown-menu, body.solarized_dark-theme .dropdown-menu li a, body.solarized_dark-theme .ace_search_options span, body.solarized_dark-theme .titlebar {
   background-color: #002B36; 
   color: #ccc;
 }
@@ -1455,7 +1456,7 @@ body.solarized_dark-theme #leftSide .menu .tools ul li.active {
 
 
 /* SOLARIZED-LIGHT THEME*/
-body.solarized_light-theme #tabs, body.solarized_light-theme #appWrapper, body.solarized_light-theme #menuBar .btn, body.solarized_light-theme .ace_search.right, body.solarized_light-theme .modal-content, body.solarized_light-theme .btn, body.solarized_light-theme #menuBar, body.solarized_light-theme #menuBar #buttons .dropdown-menu, body.solarized_light-theme .dropdown-menu li a, body.solarized_light-theme .ace_search_options span {
+body.solarized_light-theme #tabs, body.solarized_light-theme #appWrapper, body.solarized_light-theme #menuBar .btn, body.solarized_light-theme .ace_search.right, body.solarized_light-theme .modal-content, body.solarized_light-theme .btn, body.solarized_light-theme #menuBar, body.solarized_light-theme #menuBar #buttons .dropdown-menu, body.solarized_light-theme .dropdown-menu li a, body.solarized_light-theme .ace_search_options span, body.solarized_light-theme .titlebar {
   background-color: #FDF6E3; 
   color: #666;
 }
@@ -1490,7 +1491,7 @@ body.solarized_light-theme #leftSide .menu .tools ul li.active {
 
 
 /* TOMORROW THEME*/
-body.tomorrow-theme #tabs, body.tomorrow-theme #appWrapper, body.tomorrow-theme #menuBar .btn, body.tomorrow-theme .ace_search.right, body.tomorrow-theme .modal-content, body.tomorrow-theme .btn, body.tomorrow-theme #menuBar, body.tomorrow-theme #menuBar #buttons .dropdown-menu, body.tomorrow-theme .dropdown-menu li a, body.tomorrow-theme .ace_search_options span {
+body.tomorrow-theme #tabs, body.tomorrow-theme #appWrapper, body.tomorrow-theme #menuBar .btn, body.tomorrow-theme .ace_search.right, body.tomorrow-theme .modal-content, body.tomorrow-theme .btn, body.tomorrow-theme #menuBar, body.tomorrow-theme #menuBar #buttons .dropdown-menu, body.tomorrow-theme .dropdown-menu li a, body.tomorrow-theme .ace_search_options span, body.tomorrow-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -1525,7 +1526,7 @@ body.tomorrow-theme #leftSide .menu .tools ul li.active {
 
 
 /* TOMORROW-NIGHT THEME*/
-body.tomorrow_night-theme #tabs, body.tomorrow_night-theme #appWrapper, body.tomorrow_night-theme #menuBar .btn, body.tomorrow_night-theme .ace_search.right, body.tomorrow_night-theme .modal-content, body.tomorrow_night-theme .btn, body.tomorrow_night-theme #menuBar, body.tomorrow_night-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night-theme .dropdown-menu li a, body.tomorrow_night-theme .ace_search_options span {
+body.tomorrow_night-theme #tabs, body.tomorrow_night-theme #appWrapper, body.tomorrow_night-theme #menuBar .btn, body.tomorrow_night-theme .ace_search.right, body.tomorrow_night-theme .modal-content, body.tomorrow_night-theme .btn, body.tomorrow_night-theme #menuBar, body.tomorrow_night-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night-theme .dropdown-menu li a, body.tomorrow_night-theme .ace_search_options span, body.tomorrow_night-theme .titlebar {
   background-color: #1D1F21; 
   color: #ccc;
 }
@@ -1560,7 +1561,7 @@ body.tomorrow_night-theme #leftSide .menu .tools ul li.active {
 
 
 /* TOMORROW-NIGHT-BLUE THEME*/
-body.tomorrow_night_blue-theme #tabs, body.tomorrow_night_blue-theme #appWrapper, body.tomorrow_night_blue-theme #menuBar .btn, body.tomorrow_night_blue-theme .ace_search.right, body.tomorrow_night_blue-theme .modal-content, body.tomorrow_night_blue-theme .btn, body.tomorrow_night_blue-theme #menuBar, body.tomorrow_night_blue-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_blue-theme .dropdown-menu li a, body.tomorrow_night_blue-theme .ace_search_options span {
+body.tomorrow_night_blue-theme #tabs, body.tomorrow_night_blue-theme #appWrapper, body.tomorrow_night_blue-theme #menuBar .btn, body.tomorrow_night_blue-theme .ace_search.right, body.tomorrow_night_blue-theme .modal-content, body.tomorrow_night_blue-theme .btn, body.tomorrow_night_blue-theme #menuBar, body.tomorrow_night_blue-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_blue-theme .dropdown-menu li a, body.tomorrow_night_blue-theme .ace_search_options span, body.tomorrow_night_blue-theme .titlebar {
   background-color: #002451; 
   color: #ccc;
 }
@@ -1595,7 +1596,7 @@ body.tomorrow_night_blue-theme #leftSide .menu .tools ul li.active {
 
 
 /* TOMORROW-NIGHT-BRIGHT THEME*/
-body.tomorrow_night_bright-theme #tabs, body.tomorrow_night_bright-theme #appWrapper, body.tomorrow_night_bright-theme #menuBar .btn, body.tomorrow_night_bright-theme .ace_search.right, body.tomorrow_night_bright-theme .modal-content, body.tomorrow_night_bright-theme .btn, body.tomorrow_night_bright-theme #menuBar, body.tomorrow_night_bright-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_bright-theme .dropdown-menu li a, body.tomorrow_night_bright-theme .ace_search_options span {
+body.tomorrow_night_bright-theme #tabs, body.tomorrow_night_bright-theme #appWrapper, body.tomorrow_night_bright-theme #menuBar .btn, body.tomorrow_night_bright-theme .ace_search.right, body.tomorrow_night_bright-theme .modal-content, body.tomorrow_night_bright-theme .btn, body.tomorrow_night_bright-theme #menuBar, body.tomorrow_night_bright-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_bright-theme .dropdown-menu li a, body.tomorrow_night_bright-theme .ace_search_options span, body.tomorrow_night_bright-theme .titlebar {
   background-color: #000; 
   color: #ccc;
 }
@@ -1630,7 +1631,7 @@ body.tomorrow_night_bright-theme #leftSide .menu .tools ul li.active {
 
 
 /* TOMORROW-NIGHT-EIGHTIES THEME*/
-body.tomorrow_night_eighties-theme #tabs, body.tomorrow_night_eighties-theme #appWrapper, body.tomorrow_night_eighties-theme #menuBar .btn, body.tomorrow_night_eighties-theme .ace_search.right, body.tomorrow_night_eighties-theme .modal-content, body.tomorrow_night_eighties-theme .btn, body.tomorrow_night_eighties-theme #menuBar, body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_eighties-theme .dropdown-menu li a, body.tomorrow_night_eighties-theme .ace_search_options span {
+body.tomorrow_night_eighties-theme #tabs, body.tomorrow_night_eighties-theme #appWrapper, body.tomorrow_night_eighties-theme #menuBar .btn, body.tomorrow_night_eighties-theme .ace_search.right, body.tomorrow_night_eighties-theme .modal-content, body.tomorrow_night_eighties-theme .btn, body.tomorrow_night_eighties-theme #menuBar, body.tomorrow_night_eighties-theme #menuBar #buttons .dropdown-menu, body.tomorrow_night_eighties-theme .dropdown-menu li a, body.tomorrow_night_eighties-theme .ace_search_options span, body.tomorrow_night_eighties-theme .titlebar {
   background-color: #2D2D2D; 
   color: #ccc;
 }
@@ -1665,7 +1666,7 @@ body.tomorrow_night_eighties-theme #leftSide .menu .tools ul li.active {
 
 
 /* TWILIGHT THEME*/
-body.twilight-theme #tabs, body.twilight-theme #appWrapper, body.twilight-theme #menuBar .btn, body.twilight-theme .ace_search.right, body.twilight-theme .modal-content, body.twilight-theme .btn, body.twilight-theme #menuBar, body.twilight-theme #menuBar #buttons .dropdown-menu, body.twilight-theme .dropdown-menu li a, body.twilight-theme .ace_search_options span {
+body.twilight-theme #tabs, body.twilight-theme #appWrapper, body.twilight-theme #menuBar .btn, body.twilight-theme .ace_search.right, body.twilight-theme .modal-content, body.twilight-theme .btn, body.twilight-theme #menuBar, body.twilight-theme #menuBar #buttons .dropdown-menu, body.twilight-theme .dropdown-menu li a, body.twilight-theme .ace_search_options span, body.twilight-theme .titlebar {
   background-color: #141414; 
   color: #ccc;
 }
@@ -1700,7 +1701,7 @@ body.twilight-theme #leftSide .menu .tools ul li.active {
 
 
 /* VIBRANT-INK THEME*/
-body.vibrant_ink-theme #tabs, body.vibrant_ink-theme #appWrapper, body.vibrant_ink-theme #menuBar .btn, body.vibrant_ink-theme .ace_search.right, body.vibrant_ink-theme .modal-content, body.vibrant_ink-theme .btn, body.vibrant_ink-theme #menuBar, body.vibrant_ink-theme #menuBar #buttons .dropdown-menu, body.vibrant_ink-theme .dropdown-menu li a, body.vibrant_ink-theme .ace_search_options span {
+body.vibrant_ink-theme #tabs, body.vibrant_ink-theme #appWrapper, body.vibrant_ink-theme #menuBar .btn, body.vibrant_ink-theme .ace_search.right, body.vibrant_ink-theme .modal-content, body.vibrant_ink-theme .btn, body.vibrant_ink-theme #menuBar, body.vibrant_ink-theme #menuBar #buttons .dropdown-menu, body.vibrant_ink-theme .dropdown-menu li a, body.vibrant_ink-theme .ace_search_options span, body.vibrant_ink-theme .titlebar {
   background-color: #0F0F0F; 
   color: #ccc;
 }
@@ -1735,7 +1736,7 @@ body.vibrant_ink-theme #leftSide .menu .tools ul li.active {
 
 
 /* XCODE THEME*/
-body.xcode-theme #tabs, body.xcode-theme #appWrapper, body.xcode-theme #menuBar .btn, body.xcode-theme .ace_search.right, body.xcode-theme .modal-content, body.xcode-theme .btn, body.xcode-theme #menuBar, body.xcode-theme #menuBar #buttons .dropdown-menu, body.xcode-theme .dropdown-menu li a, body.xcode-theme .ace_search_options span {
+body.xcode-theme #tabs, body.xcode-theme #appWrapper, body.xcode-theme #menuBar .btn, body.xcode-theme .ace_search.right, body.xcode-theme .modal-content, body.xcode-theme .btn, body.xcode-theme #menuBar, body.xcode-theme #menuBar #buttons .dropdown-menu, body.xcode-theme .dropdown-menu li a, body.xcode-theme .ace_search_options span, body.xcode-theme .titlebar {
   background-color: #FFF; 
   color: #333;
 }
@@ -1873,7 +1874,7 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
 }
 
 #appWrapper {
-  height: calc(100% - 20px);
+  height: calc(100% - 48px);
   position: relative;
 }
 
@@ -2499,3 +2500,75 @@ body .ace_searchbtn {
 	background: #309196; 
 }
 
+
+.titlebar {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  /*background: #263238;*/
+  transition: all 0.25s;
+  text-align: center;
+  color: #fff;
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+
+.titlebar .buttons {
+  margin: 0 0 0 8px;
+  display: block;
+  float: right;
+  font-size: 1em;
+  transition: 0.25s all;
+  word-wrap: none;
+  text-overflow: visible;
+
+  /**
+   * Mac supports dragging of interactive elements; ChromeOS (possibly others)
+   * makes the buttons unusable unless the drag bit is cleared.
+   */
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+
+.titlebar .buttons button {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  border: 0;
+  min-width: 2em;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.25s;
+}
+
+.titlebar .buttons button i {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.titlebar .buttons button:focus {
+  outline: 0;
+}
+
+.titlebar .buttons button:active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.titlebar .buttons button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.titlebar.shadow {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  background: #fd6598;
+}
+
+.titlebar.fullscreen button.window {
+  display: none;
+}
