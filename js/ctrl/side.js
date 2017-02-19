@@ -186,6 +186,7 @@ ndrive.controller('SideCtrl', function($scope, $rootScope, $modal, $q, BeamFacto
       $("#leftSide").css('left', '0');
       $("#collapse").toggleClass('active');
     }
+    Editor.focus();
   };
   
   $scope.project_modal = function () {

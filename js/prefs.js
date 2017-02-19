@@ -61,7 +61,8 @@ var THEMES = [
 var KEY_MODES = [
   {key: "ace", name: "Ace"},
   {key: "emacs", name: "Emacs"},
-  {key: "vim", name: "Vim"}
+  {key: "vim", name: "Vim"},
+  // {key: "sublime", name: "Sublime"}
 ];
 
 var FONT_MODES = [];

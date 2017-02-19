@@ -62,6 +62,7 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     
     $scope.cancel = function () {
       $modalInstance.dismiss('cancel');
+      Editor.focus();
     };
     
     for (var key in PREFS) {
@@ -77,6 +78,7 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     $scope.save_prefs = function () {
       $rootScope.$emit('setPrefs', $scope.form);
       $modalInstance.dismiss('saved');
+      Editor.focus();
       return false;
     };
   };
@@ -269,6 +271,10 @@ ndrive.controller('MainCtrl', function($scope, $rootScope, $timeout, debounce, A
     else if (PREFS.keybind == 'vim') {
       handler = require("ace/keyboard/vim").handler;
     }
+    
+    // else if (PREFS.keybind == 'sublime') {
+    //   handler = require("ace/keyboard/sublime").handler;
+    // }
     
     Editor.setKeyboardHandler(handler);
     Editor.setTheme("ace/theme/" + PREFS.theme);
