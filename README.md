@@ -17,7 +17,7 @@ Material Neutron allows you to edit code on your local machine.
 - Sublime-compatible keymappings, including multiple cursors and selections
 
 
-![screenshot](http://i.imgur.com/pfKG8hY.png)
+![screenshot](http://i.imgur.com/V2RJtXU.png)
 
 
 [![Chrome Store Link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/material-neutron/dnpfikbaljjobebldaaloaaijfcgofbk)
