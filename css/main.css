@@ -1823,6 +1823,14 @@ body.xcode-theme #leftSide .menu .tools ul li.active {
   opacity: 0.5;
 }
 
+span.cursor {
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-right: 10px;
+}
+
 #menuBar #messages {
   margin: 0 0 0 20px;
   white-space: nowrap;

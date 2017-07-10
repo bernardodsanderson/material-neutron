@@ -3,6 +3,9 @@
   <span class="nfont">Material Neutron</span>
   <span class="version">V{{ manifest.version }}</span>
 </div>
+<div class="pull-right">
+  <span class="cursor">{{ cursor }}</span>
+</div>
 <div class="pull-left" id="messages">
   <div ng-repeat="(id, m) in messages" id="message-{{ m.id }}" class="flash-saving">{{ m.text }}</div>
   <div class="info update clickme" ng-if="update" ng-click="do_update('yes')">Click to Update to V{{ update.version }}</div>

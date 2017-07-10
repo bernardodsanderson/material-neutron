@@ -41,6 +41,14 @@ var ConfirmCtrl = function ($scope, $rootScope, $modalInstance, message, f) {
 };
 
 ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) {
+  
+  setTimeout(function () {
+    $scope.status_update();
+    Editor.on("changeStatus", $scope.status_update);
+    Editor.on("changeSelection", $scope.status_update);
+    Editor.on("keyboardActivity", $scope.status_update);
+  }, 1000);
+  
   $scope.messages = {};
   $scope.recent_files = [];
   $scope.form = {qsearch: ''};
@@ -82,6 +90,14 @@ ndrive.controller('MenuCtrl', function($scope, $rootScope, $modal, AuthService) 
   //     }
   //   });
   // };
+  
+  $scope.status_update = function () {
+    var cursor = Editor.selection.getCursor();
+    // $scope.cursor = (cursor.row + 1) + ':' + cursor.column;
+    $scope.$apply(function () {
+      $scope.cursor = (cursor.row + 1) + ':' + cursor.column;
+    });
+  };
   
   $scope.hide_right = function () {
     $rootScope.$emit('hideRightMenu');
